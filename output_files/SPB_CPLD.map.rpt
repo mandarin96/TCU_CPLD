@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPB_CPLD
-Fri Oct 06 10:17:38 2023
+Wed Oct 25 14:06:29 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,13 +40,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Oct 06 10:17:38 2023           ;
+; Analysis & Synthesis Status ; Successful - Wed Oct 25 14:06:29 2023           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; SPB_CPLD                                        ;
 ; Top-level Entity Name       ; SPB_CPLD                                        ;
 ; Family                      ; MAX II                                          ;
 ; Total logic elements        ; 0                                               ;
-; Total pins                  ; 103                                             ;
+; Total pins                  ; 112                                             ;
 ; Total virtual pins          ; 0                                               ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                   ;
 +-----------------------------+-------------------------------------------------+
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EPM1270T144A5      ;                    ;
+; Device                                                                     ; EPM570T144A5       ;                    ;
 ; Top-level entity name                                                      ; SPB_CPLD           ; SPB_CPLD           ;
 ; Family name                                                                ; MAX II             ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -171,7 +171,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
-; I/O pins                                    ; 103   ;
+; I/O pins                                    ; 112   ;
 +---------------------------------------------+-------+
 
 
@@ -180,7 +180,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |SPB_CPLD                  ; 0 (0)       ; 0            ; 0          ; 103  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD           ; work         ;
+; |SPB_CPLD                  ; 0 (0)       ; 0            ; 0          ; 112  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD           ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -206,7 +206,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Oct 06 10:17:38 2023
+    Info: Processing started: Wed Oct 25 14:06:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPB_CPLD -c SPB_CPLD
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file spb_cpld.bdf
@@ -236,6 +236,14 @@ Warning (275043): Pin "BUF_DATA_DIR" is missing source
 Warning (275043): Pin "BUF_DATA_/OE" is missing source
 Warning (275043): Pin "SPI_CLK_TX" is missing source
 Warning (275043): Pin "SPI_CLK_RX" is missing source
+Warning (275043): Pin "LED1" is missing source
+Warning (275043): Pin "LED2" is missing source
+Warning (275043): Pin "LED3" is missing source
+Warning (275043): Pin "LED4" is missing source
+Warning (275043): Pin "LED5" is missing source
+Warning (275043): Pin "LED6" is missing source
+Warning (275043): Pin "LED7" is missing source
+Warning (275043): Pin "LED0" is missing source
 Warning (275009): Pin "/SIG_MDU_CABLE_LOOP" not connected
 Warning (275009): Pin "/SIG_PCU_CABLE_LOOP" not connected
 Warning (275009): Pin "/SIG_OCU_CABLE_LOOP" not connected
@@ -286,6 +294,7 @@ Warning (275009): Pin "/EM1CS2" not connected
 Warning (275009): Pin "/EM1CS3" not connected
 Warning (275009): Pin "/EM1CS4" not connected
 Warning (275009): Pin "/SIG_EL_LOCKING_SW" not connected
+Warning (275009): Pin "SIG_RDC_/RESET" not connected
 Warning (275009): Pin "BF_A0" not connected
 Warning (275009): Pin "BF_A1" not connected
 Warning (275009): Pin "BF_A2" not connected
@@ -341,7 +350,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "BUF_DATA_/OE" is stuck at GND
     Warning (13410): Pin "SPI_CLK_TX" is stuck at GND
     Warning (13410): Pin "SPI_CLK_RX" is stuck at GND
-Warning (21074): Design contains 58 input pin(s) that do not drive logic
+    Warning (13410): Pin "LED1" is stuck at GND
+    Warning (13410): Pin "LED2" is stuck at GND
+    Warning (13410): Pin "LED3" is stuck at GND
+    Warning (13410): Pin "LED4" is stuck at GND
+    Warning (13410): Pin "LED5" is stuck at GND
+    Warning (13410): Pin "LED6" is stuck at GND
+    Warning (13410): Pin "LED7" is stuck at GND
+    Warning (13410): Pin "LED0" is stuck at GND
+Warning (21074): Design contains 59 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/SIG_MDU_CABLE_LOOP"
     Warning (15610): No output dependent on input pin "/SIG_PCU_CABLE_LOOP"
     Warning (15610): No output dependent on input pin "/SIG_OCU_CABLE_LOOP"
@@ -392,6 +409,7 @@ Warning (21074): Design contains 58 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/EM1CS3"
     Warning (15610): No output dependent on input pin "/EM1CS4"
     Warning (15610): No output dependent on input pin "/SIG_EL_LOCKING_SW"
+    Warning (15610): No output dependent on input pin "SIG_RDC_/RESET"
     Warning (15610): No output dependent on input pin "BF_A0"
     Warning (15610): No output dependent on input pin "BF_A1"
     Warning (15610): No output dependent on input pin "BF_A2"
@@ -400,13 +418,13 @@ Warning (21074): Design contains 58 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "BF_A17"
     Warning (15610): No output dependent on input pin "BF_A18"
     Warning (15610): No output dependent on input pin "BF_A19"
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 58 input pins
-    Info (21059): Implemented 20 output pins
+Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 59 input pins
+    Info (21059): Implemented 28 output pins
     Info (21060): Implemented 25 bidirectional pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 189 warnings
-    Info: Peak virtual memory: 4577 megabytes
-    Info: Processing ended: Fri Oct 06 10:17:38 2023
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 207 warnings
+    Info: Peak virtual memory: 4566 megabytes
+    Info: Processing ended: Wed Oct 25 14:06:29 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

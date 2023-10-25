@@ -28,8 +28,6 @@
  --                 of its bank.
  --					Bank 1:		3.3V
  --					Bank 2:		3.3V
- --					Bank 3:		3.3V
- --					Bank 4:		3.3V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --					It can also be used to report unused dedicated pins. The connection
  --					on the board for unused dedicated pins depends on whether this will
@@ -60,151 +58,151 @@
  ---------------------------------------------------------------------------------
 
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-CHIP  "SPB_CPLD"  ASSIGNED TO AN: EPM1270T144A5
+CHIP  "SPB_CPLD"  ASSIGNED TO AN: EPM570T144A5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-EGPIO1                       : 1         : bidir  : 3.3-V LVTTL       :         : 1         : N              
-/INT1                        : 2         : bidir  : 3.3-V LVTTL       :         : 1         : N              
-/EM1CS3                      : 3         : input  : 3.3-V LVTTL       :         : 1         : N              
-EGPIO0                       : 4         : bidir  : 3.3-V LVTTL       :         : 1         : N              
-SIG_RDC1_/CS                 : 5         : output : 3.3-V LVTTL       :         : 1         : N              
-SIG_DAC2_/LDAC               : 6         : output : 3.3-V LVTTL       :         : 1         : N              
-SIG_RDC2_DIR                 : 7         : input  : 3.3-V LVTTL       :         : 1         : N              
-BF_A0                        : 8         : input  : 3.3-V LVTTL       :         : 1         : N              
+/SIG_MDU_CABLE_LOOP          : 1         : input  : 3.3-V LVTTL       :         : 1         : Y              
+/SIG_PCU_CABLE_LOOP          : 2         : input  : 3.3-V LVTTL       :         : 1         : Y              
+/SIG_OCU_CABLE_LOOP          : 3         : input  : 3.3-V LVTTL       :         : 1         : Y              
+/SIG_VMS_CABLE_LOOP          : 4         : input  : 3.3-V LVTTL       :         : 1         : Y              
+/SIG_VEH_CABLE_LOOP          : 5         : input  : 3.3-V LVTTL       :         : 1         : Y              
+/SIG_DCU_CABLE_LOOP          : 6         : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_RDC1_DIR                 : 7         : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_RDC1_LOT                 : 8         : input  : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
-/SIG_AZ_IGBT_ERR_V           : 11        : input  : 3.3-V LVTTL       :         : 1         : N              
-BF_A2                        : 12        : input  : 3.3-V LVTTL       :         : 1         : N              
-BF_D[1]                      : 13        : bidir  : 3.3-V LVTTL       :         : 1         : N              
-/INT2                        : 14        : bidir  : 3.3-V LVTTL       :         : 1         : N              
-/SIG_DCU_MODE2_SW            : 15        : input  : 3.3-V LVTTL       :         : 1         : N              
-/INT4                        : 16        : bidir  : 3.3-V LVTTL       :         : 1         : N              
+SIG_RDC1_DOS                 : 11        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_RDC2_DIR                 : 12        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_RDC2_LOT                 : 13        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_RDC2_DOS                 : 14        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_DAC_/CLR                 : 15        : output : 3.3-V LVTTL       :         : 1         : Y              
+GND*                         : 16        :        :                   :         : 1         :                
 GNDINT                       : 17        : gnd    :                   :         :           :                
-/SIG_EL_IGBT_ERR_V           : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 18        :        :                   :         : 1         :                
 VCCINT                       : 19        : power  :                   : 2.5V/3.3V :           :                
-BF_D[11]                     : 20        : bidir  : 3.3-V LVTTL       :         : 1         : N              
-/SIG_SENSOR_OUT1             : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
-BF_A19                       : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
-/SIG_JOY_OPER_SW             : 23        : input  : 3.3-V LVTTL       :         : 1         : N              
-SIG_ADC3_/ELOC               : 24        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 20        :        :                   :         : 1         :                
+SIG_RDC1_/CS                 : 21        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_RDC2_/CS                 : 22        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_ADC1_/CS                 : 23        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_ADC2_/CS                 : 24        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 25        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 26        : gnd    :                   :         :           :                
-BF_D[2]                      : 27        : bidir  : 3.3-V LVTTL       :         : 1         : N              
-/SIG_SENSOR_OUT3             : 28        : input  : 3.3-V LVTTL       :         : 1         : N              
-/SIG_JOY_FAST_SW             : 29        : input  : 3.3-V LVTTL       :         : 1         : N              
-/SIG_VEH_CABLE_LOOP          : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
-BF_D[12]                     : 31        : bidir  : 3.3-V LVTTL       :         : 1         : N              
-SIG_RDC2_LOT                 : 32        : input  : 3.3-V LVTTL       :         : 1         : N              
+SIG_ADC3_/CS                 : 27        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_ADC4_/CS                 : 28        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_DAC1_/CS                 : 29        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_DAC2_/CS                 : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_DAC1_/LDAC               : 31        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_DAC2_/LDAC               : 32        : output : 3.3-V LVTTL       :         : 1         : Y              
 TMS                          : 33        : input  :                   :         : 1         :                
 TDI                          : 34        : input  :                   :         : 1         :                
 TCK                          : 35        : input  :                   :         : 1         :                
 TDO                          : 36        : output :                   :         : 1         :                
-BF_D[13]                     : 37        : bidir  : 3.3-V LVTTL       :         : 4         : N              
-BF_D[0]                      : 38        : bidir  : 3.3-V LVTTL       :         : 4         : N              
-SIG_RDC1_DIR                 : 39        : input  : 3.3-V LVTTL       :         : 4         : N              
-EM1WAIT                      : 40        : input  : 3.3-V LVTTL       :         : 4         : N              
-BF_D[6]                      : 41        : bidir  : 3.3-V LVTTL       :         : 4         : N              
-/SIG_JOY_SLOW_SW             : 42        : input  : 3.3-V LVTTL       :         : 4         : N              
-SIG_RDC2_/CS                 : 43        : output : 3.3-V LVTTL       :         : 4         : N              
-/INT3                        : 44        : bidir  : 3.3-V LVTTL       :         : 4         : N              
-SIG_ADC4_/ELOC               : 45        : input  : 3.3-V LVTTL       :         : 4         : N              
-VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
+SIG_ADC1_/ELOC               : 37        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_ADC2_/ELOC               : 38        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_ADC3_/ELOC               : 39        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_ADC4_/ELOC               : 40        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_X_/RD                    : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_X_/WR                    : 42        : output : 3.3-V LVTTL       :         : 1         : Y              
+/EM1OE                       : 43        : input  : 3.3-V LVTTL       :         : 1         : Y              
+/EM1WE                       : 44        : input  : 3.3-V LVTTL       :         : 1         : Y              
+BUF_DATA_DIR                 : 45        : output : 3.3-V LVTTL       :         : 1         : Y              
+VCCIO1                       : 46        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 47        : gnd    :                   :         :           :                
-SIG_ADC2_/ELOC               : 48        : input  : 3.3-V LVTTL       :         : 4         : N              
-BF_D[9]                      : 49        : bidir  : 3.3-V LVTTL       :         : 4         : N              
-BF_A18                       : 50        : input  : 3.3-V LVTTL       :         : 4         : N              
-BF_A3                        : 51        : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : 52        :        :                   :         : 4         :                
-/EM1WE                       : 53        : input  : 3.3-V LVTTL       :         : 4         : N              
+BUF_DATA_/OE                 : 48        : output : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[15]                     : 49        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[14]                     : 50        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[13]                     : 51        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[12]                     : 52        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[11]                     : 53        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 GNDINT                       : 54        : gnd    :                   :         :           :                
-/SIG_VMS_CABLE_LOOP          : 55        : input  : 3.3-V LVTTL       :         : 4         : N              
+BF_D[10]                     : 55        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 VCCINT                       : 56        : power  :                   : 2.5V/3.3V :           :                
-/EM1CS2                      : 57        : input  : 3.3-V LVTTL       :         : 4         : N              
-/SIG_MDU_CABLE_LOOP          : 58        : input  : 3.3-V LVTTL       :         : 4         : N              
-SIG_DAC1_/LDAC               : 59        : output : 3.3-V LVTTL       :         : 4         : N              
-SPI_CLK_START                : 60        : input  : 3.3-V LVTTL       :         : 4         : N              
-SIG_ADC3_/CS                 : 61        : output : 3.3-V LVTTL       :         : 4         : N              
-BF_A1                        : 62        : input  : 3.3-V LVTTL       :         : 4         : N              
-/INT5                        : 63        : bidir  : 3.3-V LVTTL       :         : 4         : N              
-VCCIO4                       : 64        : power  :                   : 3.3V    : 4         :                
+BF_D[9]                      : 57        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[8]                      : 58        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[7]                      : 59        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_RDC_/RESET               : 60        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 61        :        :                   :         : 1         :                
+BF_D[6]                      : 62        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[5]                      : 63        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+VCCIO1                       : 64        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 65        : gnd    :                   :         :           :                
-/SIG_AZ_LOCKING_SW           : 66        : input  : 3.3-V LVTTL       :         : 4         : N              
-EGPIO2                       : 67        : bidir  : 3.3-V LVTTL       :         : 4         : N              
-SIG_RDC1_DOS                 : 68        : input  : 3.3-V LVTTL       :         : 4         : N              
-/SIG_DCU_CABLE_LOOP          : 69        : input  : 3.3-V LVTTL       :         : 4         : N              
-LED_DCU_POWER                : 70        : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : 71        :        :                   :         : 4         :                
-/SIG_OCU_CABLE_LOOP          : 72        : input  : 3.3-V LVTTL       :         : 4         : N              
-/SIG_PCU_STATE               : 73        : input  : 3.3-V LVTTL       :         : 3         : N              
-/SIG_AZ_IGBT_ERR_W           : 74        : input  : 3.3-V LVTTL       :         : 3         : N              
-BUF_DATA_DIR                 : 75        : output : 3.3-V LVTTL       :         : 3         : N              
-/SIG_DCU_PC_ON_SIG           : 76        : input  : 3.3-V LVTTL       :         : 3         : N              
-/SIG_PCU_CABLE_LOOP          : 77        : input  : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 78        :        :                   :         : 3         :                
-/SIG_SENSOR_CABLE_LOOP       : 79        : input  : 3.3-V LVTTL       :         : 3         : N              
-/SIG_AZ_MT_CABLE_LOOP        : 80        : input  : 3.3-V LVTTL       :         : 3         : N              
-BF_A17                       : 81        : input  : 3.3-V LVTTL       :         : 3         : N              
-VCCIO3                       : 82        : power  :                   : 3.3V    : 3         :                
+BF_D[4]                      : 66        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[3]                      : 67        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[2]                      : 68        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[1]                      : 69        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_D[0]                      : 70        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
+BF_A0                        : 71        : input  : 3.3-V LVTTL       :         : 1         : Y              
+BF_A1                        : 72        : input  : 3.3-V LVTTL       :         : 1         : Y              
+BF_A2                        : 73        : input  : 3.3-V LVTTL       :         : 2         : Y              
+BF_A3                        : 74        : input  : 3.3-V LVTTL       :         : 2         : Y              
+BF_A4                        : 75        : input  : 3.3-V LVTTL       :         : 2         : Y              
+BF_A17                       : 76        : input  : 3.3-V LVTTL       :         : 2         : Y              
+BF_A18                       : 77        : input  : 3.3-V LVTTL       :         : 2         : Y              
+BF_A19                       : 78        : input  : 3.3-V LVTTL       :         : 2         : Y              
+EM1WAIT                      : 79        : input  : 3.3-V LVTTL       :         : 2         : Y              
+/EM1CS2                      : 80        : input  : 3.3-V LVTTL       :         : 2         : Y              
+/EM1CS3                      : 81        : input  : 3.3-V LVTTL       :         : 2         : Y              
+VCCIO2                       : 82        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 83        : gnd    :                   :         :           :                
-/INT0                        : 84        : bidir  : 3.3-V LVTTL       :         : 3         : N              
-/SIG_INS_CABLE_LOOP          : 85        : input  : 3.3-V LVTTL       :         : 3         : N              
-/SIG_AZ_ENC_CABLE_LOOP       : 86        : input  : 3.3-V LVTTL       :         : 3         : N              
-BF_D[5]                      : 87        : bidir  : 3.3-V LVTTL       :         : 3         : N              
-LED_JOY_FAST                 : 88        : output : 3.3-V LVTTL       :         : 3         : N              
-/SIG_EMER_SIG                : 89        : input  : 3.3-V LVTTL       :         : 3         : N              
+/EM1CS4                      : 84        : input  : 3.3-V LVTTL       :         : 2         : Y              
+/INT0                        : 85        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+/INT1                        : 86        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+/INT2                        : 87        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+/INT3                        : 88        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+EGPIO0                       : 89        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 VCCINT                       : 90        : power  :                   : 2.5V/3.3V :           :                
-SIG_ADC2_/CS                 : 91        : output : 3.3-V LVTTL       :         : 3         : N              
+EGPIO1                       : 91        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 GNDINT                       : 92        : gnd    :                   :         :           :                
-/EM1OE                       : 93        : input  : 3.3-V LVTTL       :         : 3         : N              
-SIG_X_/RD                    : 94        : output : 3.3-V LVTTL       :         : 3         : N              
-BF_D[7]                      : 95        : bidir  : 3.3-V LVTTL       :         : 3         : N              
-SIG_DAC_/CLR                 : 96        : output : 3.3-V LVTTL       :         : 3         : N              
-SIG_RDC1_LOT                 : 97        : input  : 3.3-V LVTTL       :         : 3         : N              
-BF_D[8]                      : 98        : bidir  : 3.3-V LVTTL       :         : 3         : N              
+/INT4                        : 93        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+/INT5                        : 94        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+SPI_CLK_START                : 95        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI_CLK_TX                   : 96        : output : 3.3-V LVTTL       :         : 2         : Y              
+SPI_CLK_RX                   : 97        : output : 3.3-V LVTTL       :         : 2         : Y              
+EGPIO2                       : 98        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 GNDIO                        : 99        : gnd    :                   :         :           :                
-VCCIO3                       : 100       : power  :                   : 3.3V    : 3         :                
-/SIG_EL_SIG_CABLE_LOOP       : 101       : input  : 3.3-V LVTTL       :         : 3         : N              
-/SIG_EL_IGBT_ERR_W           : 102       : input  : 3.3-V LVTTL       :         : 3         : N              
-BF_D[14]                     : 103       : bidir  : 3.3-V LVTTL       :         : 3         : N              
-BF_A4                        : 104       : input  : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 105       :        :                   :         : 3         :                
-BF_D[3]                      : 106       : bidir  : 3.3-V LVTTL       :         : 3         : N              
-/SIG_AZ_IGBT_ERR_U           : 107       : input  : 3.3-V LVTTL       :         : 3         : N              
-SIG_ADC1_/CS                 : 108       : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 109       :        :                   :         : 2         :                
-LED_JOY_SLOW                 : 110       : output : 3.3-V LVTTL       :         : 2         : N              
-/EM1CS4                      : 111       : input  : 3.3-V LVTTL       :         : 2         : N              
-SIG_RDC2_DOS                 : 112       : input  : 3.3-V LVTTL       :         : 2         : N              
-/SIG_EL_MT_CABLE_LOOP        : 113       : input  : 3.3-V LVTTL       :         : 2         : N              
-/SIG_AZ_SIG_CABLE_LOOP       : 114       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : 100       : power  :                   : 3.3V    : 2         :                
+/SIG_AZ_ENC_CABLE_LOOP       : 101       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_EL_ENC_CABLE_LOOP       : 102       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_AZ_SIG_CABLE_LOOP       : 103       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_EL_SIG_CABLE_LOOP       : 104       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_SENSOR_OUT1             : 105       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_SENSOR_OUT2             : 106       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_SENSOR_OUT3             : 107       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_AZ_IGBT_ERR_U           : 108       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_AZ_IGBT_ERR_V           : 109       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_PCU_STATE               : 110       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_AZ_MT_CABLE_LOOP        : 111       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_EL_MT_CABLE_LOOP        : 112       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_SENSOR_CABLE_LOOP       : 113       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_INS_CABLE_LOOP          : 114       : input  : 3.3-V LVTTL       :         : 2         : Y              
 GNDIO                        : 115       : gnd    :                   :         :           :                
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
-SIG_DAC1_/CS                 : 117       : output : 3.3-V LVTTL       :         : 2         : N              
-SIG_ADC1_/ELOC               : 118       : input  : 3.3-V LVTTL       :         : 2         : N              
-/SIG_DCU_MODE1_SW            : 119       : input  : 3.3-V LVTTL       :         : 2         : N              
-SIG_ADC4_/CS                 : 120       : output : 3.3-V LVTTL       :         : 2         : N              
-/SIG_EL_IGBT_ERR_U           : 121       : input  : 3.3-V LVTTL       :         : 2         : N              
-SIG_DAC2_/CS                 : 122       : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 123       :        :                   :         : 2         :                
-/SIG_EL_ENC_CABLE_LOOP       : 124       : input  : 3.3-V LVTTL       :         : 2         : N              
-BF_D[4]                      : 125       : bidir  : 3.3-V LVTTL       :         : 2         : N              
+/SIG_AZ_IGBT_ERR_W           : 117       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_EL_IGBT_ERR_U           : 118       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_EL_IGBT_ERR_V           : 119       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_EL_IGBT_ERR_W           : 120       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_AZ_LOCKING_SW           : 121       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_EL_LOCKING_SW           : 122       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_EMER_SIG                : 123       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_DCU_MODE1_SW            : 124       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_DCU_MODE2_SW            : 125       : input  : 3.3-V LVTTL       :         : 2         : Y              
 VCCINT                       : 126       : power  :                   : 2.5V/3.3V :           :                
-/SIG_SENSOR_OUT2             : 127       : input  : 3.3-V LVTTL       :         : 2         : N              
+/SIG_DCU_PC_ON_SIG           : 127       : input  : 3.3-V LVTTL       :         : 2         : Y              
 GNDINT                       : 128       : gnd    :                   :         :           :                
-BF_D[10]                     : 129       : bidir  : 3.3-V LVTTL       :         : 2         : N              
-/SIG_EL_LOCKING_SW           : 130       : input  : 3.3-V LVTTL       :         : 2         : N              
-SPI_CLK_TX                   : 131       : output : 3.3-V LVTTL       :         : 2         : N              
-SPI_CLK_RX                   : 132       : output : 3.3-V LVTTL       :         : 2         : N              
-SIG_X_/WR                    : 133       : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 134       :        :                   :         : 2         :                
+/SIG_JOY_SLOW_SW             : 129       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_JOY_FAST_SW             : 130       : input  : 3.3-V LVTTL       :         : 2         : Y              
+/SIG_JOY_OPER_SW             : 131       : input  : 3.3-V LVTTL       :         : 2         : Y              
+LED_JOY_FAST                 : 132       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED_JOY_SLOW                 : 133       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED_DCU_POWER                : 134       : output : 3.3-V LVTTL       :         : 2         : Y              
 GNDIO                        : 135       : gnd    :                   :         :           :                
 VCCIO2                       : 136       : power  :                   : 3.3V    : 2         :                
-BUF_DATA_/OE                 : 137       : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 138       :        :                   :         : 2         :                
-GND*                         : 139       :        :                   :         : 2         :                
-GND*                         : 140       :        :                   :         : 2         :                
-GND*                         : 141       :        :                   :         : 2         :                
-GND*                         : 142       :        :                   :         : 2         :                
-GND*                         : 143       :        :                   :         : 2         :                
-BF_D[15]                     : 144       : bidir  : 3.3-V LVTTL       :         : 2         : N              
+LED0                         : 137       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED1                         : 138       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED2                         : 139       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED3                         : 140       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED4                         : 141       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED5                         : 142       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED6                         : 143       : output : 3.3-V LVTTL       :         : 2         : Y              
+LED7                         : 144       : output : 3.3-V LVTTL       :         : 2         : Y              
