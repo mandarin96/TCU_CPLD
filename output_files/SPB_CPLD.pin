@@ -77,9 +77,9 @@ SIG_RDC2_DIR                 : 12        : input  : 3.3-V LVTTL       :         
 SIG_RDC2_LOT                 : 13        : input  : 3.3-V LVTTL       :         : 1         : Y              
 SIG_RDC2_DOS                 : 14        : input  : 3.3-V LVTTL       :         : 1         : Y              
 SIG_DAC_/CLR                 : 15        : output : 3.3-V LVTTL       :         : 1         : Y              
-GND*                         : 16        :        :                   :         : 1         :                
+SIG_RDC_/RESET               : 16        : output : 3.3-V LVTTL       :         : 1         : Y              
 GNDINT                       : 17        : gnd    :                   :         :           :                
-GND*                         : 18        :        :                   :         : 1         :                
+GCLK0                        : 18        : input  : 3.3-V LVTTL       :         : 1         : Y              
 VCCINT                       : 19        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 20        :        :                   :         : 1         :                
 SIG_RDC1_/CS                 : 21        : output : 3.3-V LVTTL       :         : 1         : Y              
@@ -92,8 +92,8 @@ SIG_ADC3_/CS                 : 27        : output : 3.3-V LVTTL       :         
 SIG_ADC4_/CS                 : 28        : output : 3.3-V LVTTL       :         : 1         : Y              
 SIG_DAC1_/CS                 : 29        : output : 3.3-V LVTTL       :         : 1         : Y              
 SIG_DAC2_/CS                 : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
-SIG_DAC1_/LDAC               : 31        : output : 3.3-V LVTTL       :         : 1         : Y              
-SIG_DAC2_/LDAC               : 32        : output : 3.3-V LVTTL       :         : 1         : Y              
+SIG_DAC1_/LDAC               : 31        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SIG_DAC2_/LDAC               : 32        : input  : 3.3-V LVTTL       :         : 1         : Y              
 TMS                          : 33        : input  :                   :         : 1         :                
 TDI                          : 34        : input  :                   :         : 1         :                
 TCK                          : 35        : input  :                   :         : 1         :                
@@ -121,7 +121,7 @@ VCCINT                       : 56        : power  :                   : 2.5V/3.3
 BF_D[9]                      : 57        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 BF_D[8]                      : 58        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 BF_D[7]                      : 59        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
-SIG_RDC_/RESET               : 60        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 60        :        :                   :         : 1         :                
 GND*                         : 61        :        :                   :         : 1         :                
 BF_D[6]                      : 62        : bidir  : 3.3-V LVTTL       :         : 1         : Y              
 BF_D[5]                      : 63        : bidir  : 3.3-V LVTTL       :         : 1         : Y              

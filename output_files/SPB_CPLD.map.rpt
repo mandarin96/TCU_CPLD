@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPB_CPLD
-Wed Oct 25 14:06:29 2023
+Mon Nov 13 19:57:40 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -11,10 +11,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  6. Analysis & Synthesis IP Cores Summary
+  7. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component
+  8. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component
+  9. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component
+ 10. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -40,15 +42,11 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Oct 25 14:06:29 2023           ;
+; Analysis & Synthesis Status ; Failed - Mon Nov 13 19:57:40 2023               ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; SPB_CPLD                                        ;
 ; Top-level Entity Name       ; SPB_CPLD                                        ;
 ; Family                      ; MAX II                                          ;
-; Total logic elements        ; 0                                               ;
-; Total pins                  ; 112                                             ;
-; Total virtual pins          ; 0                                               ;
-; UFM blocks                  ; 0 / 1 ( 0 % )                                   ;
 +-----------------------------+-------------------------------------------------+
 
 
@@ -136,68 +134,147 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
-; SPB_CPLD.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/SPB_CPLD.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; SPB_CPLD.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/SPB_CPLD.bdf                      ;         ;
+; LPM_COUNTER10.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd                 ;         ;
+; 74138.bdf                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/74138.bdf             ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; db/cntr_r1j.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cntr_r1j.tdf                   ;         ;
+; db/cmpr_1vb.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cmpr_1vb.tdf                   ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 0     ;
-;     -- Combinational with no register       ; 0     ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- 2 input functions                    ; 0     ;
-;     -- 1 input functions                    ; 0     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 112   ;
-+---------------------------------------------+-------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                                           ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst10 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst11 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst16 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst17 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |SPB_CPLD                  ; 0 (0)       ; 0            ; 0          ; 112  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD           ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+--------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                         ;
++------------------------+-------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
+; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
+; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
++------------------------+-------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+--------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                         ;
++------------------------+-------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
+; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
+; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
++------------------------+-------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+--------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                         ;
++------------------------+-------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
+; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
+; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
++------------------------+-------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+--------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                         ;
++------------------------+-------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
+; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
+; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
++------------------------+-------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -206,11 +283,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Oct 25 14:06:29 2023
+    Info: Processing started: Mon Nov 13 19:57:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPB_CPLD -c SPB_CPLD
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file spb_cpld.bdf
     Info (12023): Found entity 1: SPB_CPLD
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_counter10.vhd
+    Info (12022): Found design unit 1: lpm_counter10-SYN
+    Info (12023): Found entity 1: LPM_COUNTER10
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_shifter16.vhd
+    Info (12022): Found design unit 1: lpm_shifter16-SYN
+    Info (12023): Found entity 1: LPM_SHIFTER16
 Info (12127): Elaborating entity "SPB_CPLD" for the top level hierarchy
 Warning (275089): Not all bits in bus "BF_A[0..19]" are used
 Warning (275080): Converted elements in bus name "BF_A" using legacy naming rules. Make any assignments on the new names, not on the original names.
@@ -219,67 +302,16 @@ Warning (275080): Converted elements in bus name "BF_A" using legacy naming rule
 Warning (275043): Pin "LED_JOY_FAST" is missing source
 Warning (275043): Pin "LED_JOY_SLOW" is missing source
 Warning (275043): Pin "LED_DCU_POWER" is missing source
-Warning (275043): Pin "SIG_DAC_/CLR" is missing source
-Warning (275043): Pin "SIG_RDC1_/CS" is missing source
-Warning (275043): Pin "SIG_RDC2_/CS" is missing source
-Warning (275043): Pin "SIG_ADC1_/CS" is missing source
-Warning (275043): Pin "SIG_ADC2_/CS" is missing source
-Warning (275043): Pin "SIG_ADC3_/CS" is missing source
-Warning (275043): Pin "SIG_ADC4_/CS" is missing source
-Warning (275043): Pin "SIG_DAC1_/CS" is missing source
-Warning (275043): Pin "SIG_DAC2_/CS" is missing source
-Warning (275043): Pin "SIG_DAC1_/LDAC" is missing source
-Warning (275043): Pin "SIG_DAC2_/LDAC" is missing source
 Warning (275043): Pin "SIG_X_/RD" is missing source
 Warning (275043): Pin "SIG_X_/WR" is missing source
-Warning (275043): Pin "BUF_DATA_DIR" is missing source
-Warning (275043): Pin "BUF_DATA_/OE" is missing source
 Warning (275043): Pin "SPI_CLK_TX" is missing source
 Warning (275043): Pin "SPI_CLK_RX" is missing source
-Warning (275043): Pin "LED1" is missing source
-Warning (275043): Pin "LED2" is missing source
-Warning (275043): Pin "LED3" is missing source
 Warning (275043): Pin "LED4" is missing source
 Warning (275043): Pin "LED5" is missing source
 Warning (275043): Pin "LED6" is missing source
 Warning (275043): Pin "LED7" is missing source
-Warning (275043): Pin "LED0" is missing source
-Warning (275009): Pin "/SIG_MDU_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_PCU_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_OCU_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_VMS_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_VEH_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_DCU_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_PCU_STATE" not connected
-Warning (275009): Pin "/SIG_AZ_MT_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_EL_MT_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_SENSOR_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_INS_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_AZ_ENC_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_EL_ENC_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_EL_SIG_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_AZ_SIG_CABLE_LOOP" not connected
-Warning (275009): Pin "/SIG_SENSOR_OUT1" not connected
-Warning (275009): Pin "/SIG_SENSOR_OUT2" not connected
-Warning (275009): Pin "/SIG_SENSOR_OUT3" not connected
-Warning (275009): Pin "/SIG_AZ_IGBT_ERR_U" not connected
-Warning (275009): Pin "/SIG_AZ_IGBT_ERR_V" not connected
-Warning (275009): Pin "/SIG_AZ_IGBT_ERR_W" not connected
-Warning (275009): Pin "/SIG_EL_IGBT_ERR_U" not connected
-Warning (275009): Pin "/SIG_EL_IGBT_ERR_V" not connected
-Warning (275009): Pin "/SIG_EL_IGBT_ERR_W" not connected
-Warning (275009): Pin "/SIG_AZ_LOCKING_SW" not connected
-Warning (275009): Pin "/SIG_EMER_SIG" not connected
-Warning (275009): Pin "/SIG_DCU_MODE1_SW" not connected
-Warning (275009): Pin "/SIG_DCU_MODE2_SW" not connected
-Warning (275009): Pin "/SIG_DCU_PC_ON_SIG" not connected
-Warning (275009): Pin "/SIG_JOY_SLOW_SW" not connected
-Warning (275009): Pin "/SIG_JOY_FAST_SW" not connected
-Warning (275009): Pin "/SIG_JOY_OPER_SW" not connected
-Warning (275009): Pin "SIG_RDC1_DIR" not connected
 Warning (275009): Pin "SIG_RDC1_LOT" not connected
 Warning (275009): Pin "SIG_RDC1_DOS" not connected
-Warning (275009): Pin "SIG_RDC2_DIR" not connected
 Warning (275009): Pin "SIG_RDC2_LOT" not connected
 Warning (275009): Pin "SIG_RDC2_DOS" not connected
 Warning (275009): Pin "SIG_ADC1_/ELOC" not connected
@@ -287,145 +319,54 @@ Warning (275009): Pin "SIG_ADC2_/ELOC" not connected
 Warning (275009): Pin "SIG_ADC3_/ELOC" not connected
 Warning (275009): Pin "SIG_ADC4_/ELOC" not connected
 Warning (275009): Pin "SPI_CLK_START" not connected
-Warning (275009): Pin "/EM1OE" not connected
 Warning (275009): Pin "/EM1WE" not connected
 Warning (275009): Pin "EM1WAIT" not connected
-Warning (275009): Pin "/EM1CS2" not connected
-Warning (275009): Pin "/EM1CS3" not connected
-Warning (275009): Pin "/EM1CS4" not connected
-Warning (275009): Pin "/SIG_EL_LOCKING_SW" not connected
-Warning (275009): Pin "SIG_RDC_/RESET" not connected
-Warning (275009): Pin "BF_A0" not connected
-Warning (275009): Pin "BF_A1" not connected
-Warning (275009): Pin "BF_A2" not connected
+Warning (275009): Pin "SIG_DAC1_/LDAC" not connected
+Warning (275009): Pin "SIG_DAC2_/LDAC" not connected
 Warning (275009): Pin "BF_A3" not connected
 Warning (275009): Pin "BF_A4" not connected
-Warning (275009): Pin "BF_A17" not connected
-Warning (275009): Pin "BF_A18" not connected
-Warning (275009): Pin "BF_A19" not connected
+Warning (275008): Primitive "GND" of instance "inst2" not used
+Info (12128): Elaborating entity "74138" for hierarchy "74138:inst12"
+Info (12130): Elaborated megafunction instantiation "74138:inst12"
+Info (12128): Elaborating entity "LPM_COUNTER10" for hierarchy "LPM_COUNTER10:inst16"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "10"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r1j.tdf
+    Info (12023): Found entity 1: cntr_r1j
+Info (12128): Elaborating entity "cntr_r1j" for hierarchy "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_1vb.tdf
+    Info (12023): Found entity 1: cmpr_1vb
+Info (12128): Elaborating entity "cmpr_1vb" for hierarchy "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1"
+Info (13014): Ignored 5 buffer(s)
+    Info (13019): Ignored 5 SOFT buffer(s)
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "/INT0" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "/INT1" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO0" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO1" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
-    Warning (13040): Bidir "/INT0" has no driver
-    Warning (13040): Bidir "/INT1" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
     Warning (13040): Bidir "/INT2" has no driver
     Warning (13040): Bidir "/INT3" has no driver
     Warning (13040): Bidir "/INT4" has no driver
     Warning (13040): Bidir "/INT5" has no driver
     Warning (13040): Bidir "EGPIO2" has no driver
-    Warning (13040): Bidir "EGPIO0" has no driver
-    Warning (13040): Bidir "EGPIO1" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-    Warning (13040): Bidir "BF_D" has no driver
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED_JOY_FAST" is stuck at GND
-    Warning (13410): Pin "LED_JOY_SLOW" is stuck at GND
-    Warning (13410): Pin "LED_DCU_POWER" is stuck at GND
-    Warning (13410): Pin "SIG_DAC_/CLR" is stuck at GND
-    Warning (13410): Pin "SIG_RDC1_/CS" is stuck at GND
-    Warning (13410): Pin "SIG_RDC2_/CS" is stuck at GND
-    Warning (13410): Pin "SIG_ADC1_/CS" is stuck at GND
-    Warning (13410): Pin "SIG_ADC2_/CS" is stuck at GND
-    Warning (13410): Pin "SIG_ADC3_/CS" is stuck at GND
-    Warning (13410): Pin "SIG_ADC4_/CS" is stuck at GND
-    Warning (13410): Pin "SIG_DAC1_/CS" is stuck at GND
-    Warning (13410): Pin "SIG_DAC2_/CS" is stuck at GND
-    Warning (13410): Pin "SIG_DAC1_/LDAC" is stuck at GND
-    Warning (13410): Pin "SIG_DAC2_/LDAC" is stuck at GND
-    Warning (13410): Pin "SIG_X_/RD" is stuck at GND
-    Warning (13410): Pin "SIG_X_/WR" is stuck at GND
-    Warning (13410): Pin "BUF_DATA_DIR" is stuck at GND
-    Warning (13410): Pin "BUF_DATA_/OE" is stuck at GND
-    Warning (13410): Pin "SPI_CLK_TX" is stuck at GND
-    Warning (13410): Pin "SPI_CLK_RX" is stuck at GND
-    Warning (13410): Pin "LED1" is stuck at GND
-    Warning (13410): Pin "LED2" is stuck at GND
-    Warning (13410): Pin "LED3" is stuck at GND
-    Warning (13410): Pin "LED4" is stuck at GND
-    Warning (13410): Pin "LED5" is stuck at GND
-    Warning (13410): Pin "LED6" is stuck at GND
-    Warning (13410): Pin "LED7" is stuck at GND
-    Warning (13410): Pin "LED0" is stuck at GND
-Warning (21074): Design contains 59 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "/SIG_MDU_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_PCU_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_OCU_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_VMS_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_VEH_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_DCU_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_PCU_STATE"
-    Warning (15610): No output dependent on input pin "/SIG_AZ_MT_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_EL_MT_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_SENSOR_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_INS_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_AZ_ENC_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_EL_ENC_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_EL_SIG_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_AZ_SIG_CABLE_LOOP"
-    Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT1"
-    Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT2"
-    Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT3"
-    Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_U"
-    Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_V"
-    Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_W"
-    Warning (15610): No output dependent on input pin "/SIG_EL_IGBT_ERR_U"
-    Warning (15610): No output dependent on input pin "/SIG_EL_IGBT_ERR_V"
-    Warning (15610): No output dependent on input pin "/SIG_EL_IGBT_ERR_W"
-    Warning (15610): No output dependent on input pin "/SIG_AZ_LOCKING_SW"
-    Warning (15610): No output dependent on input pin "/SIG_EMER_SIG"
-    Warning (15610): No output dependent on input pin "/SIG_DCU_MODE1_SW"
-    Warning (15610): No output dependent on input pin "/SIG_DCU_MODE2_SW"
-    Warning (15610): No output dependent on input pin "/SIG_DCU_PC_ON_SIG"
-    Warning (15610): No output dependent on input pin "/SIG_JOY_SLOW_SW"
-    Warning (15610): No output dependent on input pin "/SIG_JOY_FAST_SW"
-    Warning (15610): No output dependent on input pin "/SIG_JOY_OPER_SW"
-    Warning (15610): No output dependent on input pin "SIG_RDC1_DIR"
-    Warning (15610): No output dependent on input pin "SIG_RDC1_LOT"
-    Warning (15610): No output dependent on input pin "SIG_RDC1_DOS"
-    Warning (15610): No output dependent on input pin "SIG_RDC2_DIR"
-    Warning (15610): No output dependent on input pin "SIG_RDC2_LOT"
-    Warning (15610): No output dependent on input pin "SIG_RDC2_DOS"
-    Warning (15610): No output dependent on input pin "SIG_ADC1_/ELOC"
-    Warning (15610): No output dependent on input pin "SIG_ADC2_/ELOC"
-    Warning (15610): No output dependent on input pin "SIG_ADC3_/ELOC"
-    Warning (15610): No output dependent on input pin "SIG_ADC4_/ELOC"
-    Warning (15610): No output dependent on input pin "SPI_CLK_START"
-    Warning (15610): No output dependent on input pin "/EM1OE"
-    Warning (15610): No output dependent on input pin "/EM1WE"
-    Warning (15610): No output dependent on input pin "EM1WAIT"
-    Warning (15610): No output dependent on input pin "/EM1CS2"
-    Warning (15610): No output dependent on input pin "/EM1CS3"
-    Warning (15610): No output dependent on input pin "/EM1CS4"
-    Warning (15610): No output dependent on input pin "/SIG_EL_LOCKING_SW"
-    Warning (15610): No output dependent on input pin "SIG_RDC_/RESET"
-    Warning (15610): No output dependent on input pin "BF_A0"
-    Warning (15610): No output dependent on input pin "BF_A1"
-    Warning (15610): No output dependent on input pin "BF_A2"
-    Warning (15610): No output dependent on input pin "BF_A3"
-    Warning (15610): No output dependent on input pin "BF_A4"
-    Warning (15610): No output dependent on input pin "BF_A17"
-    Warning (15610): No output dependent on input pin "BF_A18"
-    Warning (15610): No output dependent on input pin "BF_A19"
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 59 input pins
-    Info (21059): Implemented 28 output pins
-    Info (21060): Implemented 25 bidirectional pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 207 warnings
-    Info: Peak virtual memory: 4566 megabytes
-    Info: Processing ended: Wed Oct 25 14:06:29 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+Error (13076): The pin "BF_D[1]" has multiple drivers due to the conflicting nodes "inst102" and "inst134"
+Error (13076): The pin "BF_D[2]" has multiple drivers due to the conflicting nodes "inst103" and "inst135"
+Error (13076): The pin "BF_D[3]" has multiple drivers due to the conflicting nodes "inst104" and "inst136"
+Error (13076): The pin "BF_D[4]" has multiple drivers due to the conflicting nodes "inst105" and "inst137"
+Error (13076): The pin "BF_D[5]" has multiple drivers due to the conflicting nodes "inst100" and "inst128"
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 5 errors, 45 warnings
+    Error: Peak virtual memory: 4634 megabytes
+    Error: Processing ended: Mon Nov 13 19:57:40 2023
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:00
 
 
