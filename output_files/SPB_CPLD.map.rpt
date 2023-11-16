@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPB_CPLD
-Mon Nov 13 19:57:40 2023
+Thu Nov 16 16:26:17 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -11,12 +11,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis IP Cores Summary
-  7. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component
-  8. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component
-  9. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component
- 10. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component
- 11. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component
+ 13. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component
+ 14. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component
+ 15. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -42,11 +47,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 13 19:57:40 2023               ;
+; Analysis & Synthesis Status ; Successful - Thu Nov 16 16:26:17 2023           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; SPB_CPLD                                        ;
 ; Top-level Entity Name       ; SPB_CPLD                                        ;
 ; Family                      ; MAX II                                          ;
+; Total logic elements        ; 46                                              ;
+; Total pins                  ; 113                                             ;
+; Total virtual pins          ; 0                                               ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                   ;
 +-----------------------------+-------------------------------------------------+
 
 
@@ -157,6 +166,65 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
 
 
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 46    ;
+;     -- Combinational with no register       ; 22    ;
+;     -- Register only                        ; 10    ;
+;     -- Combinational with a register        ; 14    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 14    ;
+;     -- 3 input functions                    ; 1     ;
+;     -- 2 input functions                    ; 15    ;
+;     -- 1 input functions                    ; 5     ;
+;     -- 0 input functions                    ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 34    ;
+;     -- arithmetic mode                      ; 12    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 12    ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 24    ;
+; Total logic cells in carry chains           ; 15    ;
+; I/O pins                                    ; 113   ;
+; Maximum fan-out node                        ; ~GND  ;
+; Maximum fan-out                             ; 12    ;
+; Total fan-out                               ; 173   ;
+; Average fan-out                             ; 1.09  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                     ; Library Name ;
++-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
+; |SPB_CPLD                                 ; 46 (21)     ; 24           ; 0          ; 113  ; 0            ; 22 (9)       ; 10 (10)           ; 14 (2)           ; 15 (0)          ; 0 (0)      ; |SPB_CPLD                                                                                               ; work         ;
+;    |74138:inst12|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst12                                                                                  ; work         ;
+;    |74138:inst1|                          ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst1                                                                                   ; work         ;
+;    |LPM_COUNTER10:inst10|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10                                                                          ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component                                        ; work         ;
+;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
+;             |cmpr_1vb:cmpr1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1 ; work         ;
+;    |LPM_COUNTER10:inst11|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst11                                                                          ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component                                        ; work         ;
+;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
+;             |cmpr_1vb:cmpr1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1 ; work         ;
+;    |LPM_COUNTER10:inst16|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16                                                                          ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component                                        ; work         ;
+;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
+;             |cmpr_1vb:cmpr1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1 ; work         ;
++-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis IP Cores Summary                                                                                                                      ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
@@ -167,6 +235,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst16 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
 ; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst17 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                ;
++---------------------------------------------------------------------------------------------+---------------------+
+; Register name                                                                               ; Reason for Removal  ;
++---------------------------------------------------------------------------------------------+---------------------+
+; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0..3] ; Lost fanout         ;
+; inst142                                                                                     ; Merged with inst145 ;
+; inst146                                                                                     ; Merged with inst143 ;
+; inst144                                                                                     ; Merged with inst147 ;
+; Total Number of Removed Registers = 7                                                       ;                     ;
++---------------------------------------------------------------------------------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                               ;
++------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+; Register name                                                                            ; Reason for Removal ; Registers Removed due to This Register                                                    ;
++------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0] ; Lost Fanouts       ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[1], ;
+;                                                                                          ;                    ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[2], ;
+;                                                                                          ;                    ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[3]  ;
++------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 24    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 12    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -283,7 +390,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 13 19:57:39 2023
+    Info: Processing started: Thu Nov 16 16:26:13 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPB_CPLD -c SPB_CPLD
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file spb_cpld.bdf
@@ -295,6 +402,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file lpm_shi
     Info (12022): Found design unit 1: lpm_shifter16-SYN
     Info (12023): Found entity 1: LPM_SHIFTER16
 Info (12127): Elaborating entity "SPB_CPLD" for the top level hierarchy
+Warning (275011): Block or symbol "SOFT" of instance "inst28" overlaps another block or symbol
 Warning (275089): Not all bits in bus "BF_A[0..19]" are used
 Warning (275080): Converted elements in bus name "BF_A" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "BF_A[0..4]" to "BF_A0..4"
@@ -310,22 +418,79 @@ Warning (275043): Pin "LED4" is missing source
 Warning (275043): Pin "LED5" is missing source
 Warning (275043): Pin "LED6" is missing source
 Warning (275043): Pin "LED7" is missing source
+Warning (275009): Pin "/SIG_MDU_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_PCU_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_OCU_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_VMS_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_VEH_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_DCU_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_PCU_STATE" not connected
+Warning (275009): Pin "/SIG_AZ_MT_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_EL_MT_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_SENSOR_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_INS_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_AZ_ENC_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_EL_ENC_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_EL_SIG_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_AZ_SIG_CABLE_LOOP" not connected
+Warning (275009): Pin "/SIG_SENSOR_OUT1" not connected
+Warning (275009): Pin "/SIG_SENSOR_OUT2" not connected
+Warning (275009): Pin "/SIG_SENSOR_OUT3" not connected
+Warning (275009): Pin "/SIG_AZ_IGBT_ERR_U" not connected
+Warning (275009): Pin "/SIG_AZ_IGBT_ERR_V" not connected
+Warning (275009): Pin "/SIG_AZ_IGBT_ERR_W" not connected
+Warning (275009): Pin "/SIG_AZ_LOCKING_SW" not connected
+Warning (275009): Pin "/SIG_DCU_MODE2_SW" not connected
+Warning (275009): Pin "/SIG_DCU_PC_ON_SIG" not connected
+Warning (275009): Pin "/SIG_JOY_SLOW_SW" not connected
+Warning (275009): Pin "/SIG_JOY_FAST_SW" not connected
+Warning (275009): Pin "/SIG_JOY_OPER_SW" not connected
 Warning (275009): Pin "SIG_RDC1_LOT" not connected
 Warning (275009): Pin "SIG_RDC1_DOS" not connected
-Warning (275009): Pin "SIG_RDC2_LOT" not connected
-Warning (275009): Pin "SIG_RDC2_DOS" not connected
 Warning (275009): Pin "SIG_ADC1_/ELOC" not connected
-Warning (275009): Pin "SIG_ADC2_/ELOC" not connected
 Warning (275009): Pin "SIG_ADC3_/ELOC" not connected
 Warning (275009): Pin "SIG_ADC4_/ELOC" not connected
 Warning (275009): Pin "SPI_CLK_START" not connected
 Warning (275009): Pin "/EM1WE" not connected
 Warning (275009): Pin "EM1WAIT" not connected
+Warning (275009): Pin "/SIG_EL_LOCKING_SW" not connected
 Warning (275009): Pin "SIG_DAC1_/LDAC" not connected
 Warning (275009): Pin "SIG_DAC2_/LDAC" not connected
 Warning (275009): Pin "BF_A3" not connected
 Warning (275009): Pin "BF_A4" not connected
+Warning (275008): Primitive "DFF" of instance "inst107" not used
+Warning (275008): Primitive "DFF" of instance "inst108" not used
+Warning (275008): Primitive "DFF" of instance "inst111" not used
+Warning (275008): Primitive "DFF" of instance "inst112" not used
+Warning (275008): Primitive "DFF" of instance "inst113" not used
+Warning (275008): Primitive "DFF" of instance "inst114" not used
+Warning (275008): Primitive "DFF" of instance "inst115" not used
+Warning (275008): Primitive "DFF" of instance "inst116" not used
+Warning (275008): Primitive "DFF" of instance "inst117" not used
+Warning (275008): Primitive "DFF" of instance "inst118" not used
+Warning (275008): Primitive "DFF" of instance "inst119" not used
+Warning (275008): Primitive "DFF" of instance "inst120" not used
+Warning (275008): Primitive "DFF" of instance "inst121" not used
+Warning (275008): Primitive "DFF" of instance "inst122" not used
+Warning (275008): Primitive "DFF" of instance "inst123" not used
+Warning (275008): Primitive "DFF" of instance "inst124" not used
+Warning (275008): Primitive "DFF" of instance "inst125" not used
+Warning (275008): Primitive "DFF" of instance "inst126" not used
 Warning (275008): Primitive "GND" of instance "inst2" not used
+Warning (275008): Primitive "AND4" of instance "inst30" not used
+Warning (275008): Primitive "NOT" of instance "inst31" not used
+Warning (275008): Primitive "NOT" of instance "inst32" not used
+Warning (275008): Primitive "AND4" of instance "inst33" not used
+Warning (275008): Primitive "NOT" of instance "inst37" not used
+Warning (275008): Primitive "AND4" of instance "inst38" not used
+Warning (275008): Primitive "AND4" of instance "inst39" not used
+Warning (275008): Primitive "NOT" of instance "inst40" not used
+Warning (275008): Primitive "NOT" of instance "inst42" not used
+Warning (275008): Primitive "AND4" of instance "inst43" not used
+Warning (275008): Primitive "NOT" of instance "inst44" not used
+Warning (275008): Primitive "AND4" of instance "inst9" not used
+Warning (275008): Primitive "DFF" of instance "inst93" not used
+Warning (275008): Primitive "DFF" of instance "inst94" not used
 Info (12128): Elaborating entity "74138" for hierarchy "74138:inst12"
 Info (12130): Elaborated megafunction instantiation "74138:inst12"
 Info (12128): Elaborating entity "LPM_COUNTER10" for hierarchy "LPM_COUNTER10:inst16"
@@ -343,30 +508,109 @@ Info (12128): Elaborating entity "cntr_r1j" for hierarchy "LPM_COUNTER10:inst16|
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_1vb.tdf
     Info (12023): Found entity 1: cmpr_1vb
 Info (12128): Elaborating entity "cmpr_1vb" for hierarchy "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1"
-Info (13014): Ignored 5 buffer(s)
-    Info (13019): Ignored 5 SOFT buffer(s)
+Info (13014): Ignored 8 buffer(s)
+    Info (13019): Ignored 8 SOFT buffer(s)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "/INT0" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "/INT1" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "/INT4" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "/INT5" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO2" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO0" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO1" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "BF_D" has no driver
     Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
+    Warning (13040): Bidir "BF_D" has no driver
     Warning (13040): Bidir "/INT2" has no driver
     Warning (13040): Bidir "/INT3" has no driver
-    Warning (13040): Bidir "/INT4" has no driver
-    Warning (13040): Bidir "/INT5" has no driver
-    Warning (13040): Bidir "EGPIO2" has no driver
-Error (13076): The pin "BF_D[1]" has multiple drivers due to the conflicting nodes "inst102" and "inst134"
-Error (13076): The pin "BF_D[2]" has multiple drivers due to the conflicting nodes "inst103" and "inst135"
-Error (13076): The pin "BF_D[3]" has multiple drivers due to the conflicting nodes "inst104" and "inst136"
-Error (13076): The pin "BF_D[4]" has multiple drivers due to the conflicting nodes "inst105" and "inst137"
-Error (13076): The pin "BF_D[5]" has multiple drivers due to the conflicting nodes "inst100" and "inst128"
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 5 errors, 45 warnings
-    Error: Peak virtual memory: 4634 megabytes
-    Error: Processing ended: Mon Nov 13 19:57:40 2023
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:00
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "/INT0~synth"
+    Warning (13010): Node "/INT1~synth"
+    Warning (13010): Node "/INT4~synth"
+    Warning (13010): Node "/INT5~synth"
+    Warning (13010): Node "EGPIO2~synth"
+    Warning (13010): Node "EGPIO0~synth"
+    Warning (13010): Node "EGPIO1~synth"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED_JOY_FAST" is stuck at GND
+    Warning (13410): Pin "LED_JOY_SLOW" is stuck at GND
+    Warning (13410): Pin "LED_DCU_POWER" is stuck at GND
+    Warning (13410): Pin "SIG_DAC_/CLR" is stuck at VCC
+    Warning (13410): Pin "SIG_X_/RD" is stuck at GND
+    Warning (13410): Pin "SIG_X_/WR" is stuck at GND
+    Warning (13410): Pin "SPI_CLK_TX" is stuck at GND
+    Warning (13410): Pin "SPI_CLK_RX" is stuck at GND
+    Warning (13410): Pin "LED4" is stuck at GND
+    Warning (13410): Pin "LED5" is stuck at GND
+    Warning (13410): Pin "LED6" is stuck at GND
+    Warning (13410): Pin "LED7" is stuck at GND
+    Warning (13410): Pin "SIG_RDC_/RESET" is stuck at VCC
+Warning (18029): Output pin "LED3" driven by bidirectional pin "BF_D[0]" cannot be tri-stated
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 40 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "/SIG_MDU_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_PCU_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_OCU_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_VMS_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_VEH_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_DCU_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_PCU_STATE"
+    Warning (15610): No output dependent on input pin "/SIG_AZ_MT_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_EL_MT_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_SENSOR_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_INS_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_AZ_ENC_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_EL_ENC_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_EL_SIG_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_AZ_SIG_CABLE_LOOP"
+    Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT1"
+    Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT2"
+    Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT3"
+    Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_U"
+    Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_V"
+    Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_W"
+    Warning (15610): No output dependent on input pin "/SIG_AZ_LOCKING_SW"
+    Warning (15610): No output dependent on input pin "/SIG_DCU_MODE2_SW"
+    Warning (15610): No output dependent on input pin "/SIG_DCU_PC_ON_SIG"
+    Warning (15610): No output dependent on input pin "/SIG_JOY_SLOW_SW"
+    Warning (15610): No output dependent on input pin "/SIG_JOY_FAST_SW"
+    Warning (15610): No output dependent on input pin "/SIG_JOY_OPER_SW"
+    Warning (15610): No output dependent on input pin "SIG_RDC1_LOT"
+    Warning (15610): No output dependent on input pin "SIG_RDC1_DOS"
+    Warning (15610): No output dependent on input pin "SIG_ADC1_/ELOC"
+    Warning (15610): No output dependent on input pin "SIG_ADC3_/ELOC"
+    Warning (15610): No output dependent on input pin "SIG_ADC4_/ELOC"
+    Warning (15610): No output dependent on input pin "SPI_CLK_START"
+    Warning (15610): No output dependent on input pin "/EM1WE"
+    Warning (15610): No output dependent on input pin "EM1WAIT"
+    Warning (15610): No output dependent on input pin "/SIG_EL_LOCKING_SW"
+    Warning (15610): No output dependent on input pin "SIG_DAC1_/LDAC"
+    Warning (15610): No output dependent on input pin "SIG_DAC2_/LDAC"
+    Warning (15610): No output dependent on input pin "BF_A3"
+    Warning (15610): No output dependent on input pin "BF_A4"
+Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 61 input pins
+    Info (21059): Implemented 27 output pins
+    Info (21060): Implemented 25 bidirectional pins
+    Info (21061): Implemented 46 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 181 warnings
+    Info: Peak virtual memory: 4633 megabytes
+    Info: Processing ended: Thu Nov 16 16:26:17 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:00
 
 

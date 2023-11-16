@@ -1,5 +1,5 @@
 Flow report for SPB_CPLD
-Mon Nov 13 19:57:40 2023
+Thu Nov 16 16:26:25 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,13 +40,17 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +---------------------------+-------------------------------------------------+
-; Flow Status               ; Flow Failed - Mon Nov 13 19:57:40 2023          ;
+; Flow Status               ; Successful - Thu Nov 16 16:26:23 2023           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; SPB_CPLD                                        ;
 ; Top-level Entity Name     ; SPB_CPLD                                        ;
 ; Family                    ; MAX II                                          ;
 ; Device                    ; EPM570T144A5                                    ;
 ; Timing Models             ; Final                                           ;
+; Total logic elements      ; 42 / 570 ( 7 % )                                ;
+; Total pins                ; 113 / 116 ( 97 % )                              ;
+; Total virtual pins        ; 0                                               ;
+; UFM blocks                ; 0 / 1 ( 0 % )                                   ;
 +---------------------------+-------------------------------------------------+
 
 
@@ -55,7 +59,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/13/2023 19:57:39 ;
+; Start date & time ; 11/16/2023 16:26:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SPB_CPLD            ;
 +-------------------+---------------------+
@@ -66,7 +70,7 @@ applicable agreement for further details.
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 216401450442210.169987305906488 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 216401450442210.170011957517436 ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                          ; LPM_COUNTER                     ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                          ; LPM_SHIFTREG                    ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                       ; 13.0                            ; --            ; --          ; --         ;
@@ -82,29 +86,38 @@ applicable agreement for further details.
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 4634 MB             ; 00:00:00                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:00                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4633 MB             ; 00:00:00                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 4767 MB             ; 00:00:00                           ;
+; Assembler                 ; 00:00:00     ; 1.0                     ; 4525 MB             ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4529 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:00                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; cng_w8v          ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; cng_w8v          ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; cng_w8v          ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; cng_w8v          ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; cng_w8v          ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off SPB_CPLD -c SPB_CPLD
+quartus_fit --read_settings_files=off --write_settings_files=off SPB_CPLD -c SPB_CPLD
+quartus_asm --read_settings_files=off --write_settings_files=off SPB_CPLD -c SPB_CPLD
+quartus_sta SPB_CPLD -c SPB_CPLD
 
 
 
