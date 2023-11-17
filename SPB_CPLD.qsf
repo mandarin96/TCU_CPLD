@@ -166,3 +166,4 @@ set_location_assignment PIN_16 -to SIG_RDC_/RESET
 set_global_assignment -name QIP_FILE LPM_COUNTER10.qip
 set_location_assignment PIN_18 -to GCLK0
 set_global_assignment -name QIP_FILE LPM_SHIFTER16.qip
+set_global_assignment -name QIP_FILE LPM_COUNTER4.qip

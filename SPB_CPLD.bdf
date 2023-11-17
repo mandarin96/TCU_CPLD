@@ -2836,78 +2836,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 3104 -368 3152 -336)
-	(text "SOFT" (rect 1 0 37 15)(font "Arial" (font_size 6)))
-	(text "inst34" (rect 3 21 47 37)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 14 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
-		(line (pt 32 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 14 7)(pt 32 16))
-		(line (pt 14 25)(pt 14 7))
-		(line (pt 14 25)(pt 32 16))
-	)
-)
-(symbol
-	(rect 3104 -416 3152 -384)
-	(text "SOFT" (rect 1 0 37 15)(font "Arial" (font_size 6)))
-	(text "inst35" (rect 3 21 47 37)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 14 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
-		(line (pt 32 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 14 7)(pt 32 16))
-		(line (pt 14 25)(pt 14 7))
-		(line (pt 14 25)(pt 32 16))
-	)
-)
-(symbol
-	(rect 3104 -464 3152 -432)
-	(text "SOFT" (rect 1 0 37 15)(font "Arial" (font_size 6)))
-	(text "inst41" (rect 3 21 47 37)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 14 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
-		(line (pt 32 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 14 7)(pt 32 16))
-		(line (pt 14 25)(pt 14 7))
-		(line (pt 14 25)(pt 32 16))
-	)
-)
-(symbol
 	(rect 2440 40 2504 88)
 	(text "AND3" (rect 1 0 38 15)(font "Arial" (font_size 6)))
 	(text "inst6" (rect 3 37 38 53)(font "Arial" ))
@@ -5446,30 +5374,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 2552 616 2600 648)
-	(text "SOFT" (rect 1 0 37 15)(font "Arial" (font_size 6)))
-	(text "inst7" (rect 3 21 38 37)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 14 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
-		(line (pt 32 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 14 7)(pt 32 16))
-		(line (pt 14 25)(pt 14 7))
-		(line (pt 14 25)(pt 32 16))
-	)
-)
-(symbol
 	(rect 2104 888 2152 920)
 	(text "SOFT" (rect 1 0 37 15)(font "Arial" (font_size 6)))
 	(text "inst28" (rect 3 21 47 37)(font "Arial" ))
@@ -5517,6 +5421,30 @@ applicable agreement for further details.
 		(line (pt 14 25)(pt 32 16))
 	)
 )
+(symbol
+	(rect 2376 528 2424 560)
+	(text "SOFT" (rect 1 0 37 15)(font "Arial" (font_size 6)))
+	(text "inst53" (rect 3 21 47 37)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 20 23)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 60 23)(font "Courier New" (bold))(invisible))
+		(line (pt 32 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 14 7)(pt 32 16))
+		(line (pt 14 25)(pt 14 7))
+		(line (pt 14 25)(pt 32 16))
+	)
+)
 (connector
 	(text "BF_A17" (rect 1210 8 1270 24)(font "Arial" ))
 	(pt 1296 24)
@@ -5535,11 +5463,6 @@ applicable agreement for further details.
 	(text "SIG_ADC1_/CS" (rect 1738 -8 1854 8)(font "Arial" ))
 	(pt 1856 8)
 	(pt 1728 8)
-)
-(connector
-	(text "SIG_ADC2_/CS" (rect 1738 8 1854 24)(font "Arial" ))
-	(pt 1856 24)
-	(pt 1728 24)
 )
 (connector
 	(text "SIG_ADC3_/CS" (rect 1738 24 1854 40)(font "Arial" ))
@@ -7546,11 +7469,6 @@ applicable agreement for further details.
 	(pt 2576 1728)
 )
 (connector
-	(text "/INT0" (rect 2690 1704 2728 1720)(font "Arial" ))
-	(pt 2784 1720)
-	(pt 2640 1720)
-)
-(connector
 	(text "/SIG_EMER_SIG" (rect 2066 1784 2189 1800)(font "Arial" ))
 	(pt 2048 1800)
 	(pt 2240 1800)
@@ -7684,11 +7602,6 @@ applicable agreement for further details.
 (connector
 	(pt 2728 2200)
 	(pt 2728 2104)
-)
-(connector
-	(text "/INT1" (rect 2874 2080 2912 2096)(font "Arial" ))
-	(pt 2952 2096)
-	(pt 2824 2096)
 )
 (connector
 	(pt 2472 1800)
@@ -8125,26 +8038,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "/SIG_EL_IGBT_ERR_W" (rect 2930 -368 3107 -352)(font "Arial" ))
-	(pt 3104 -352)
-	(pt 2928 -352)
-)
-(connector
-	(text "/SIG_EL_IGBT_ERR_V" (rect 2930 -416 3102 -400)(font "Arial" ))
-	(pt 3104 -400)
-	(pt 2928 -400)
-)
-(connector
-	(text "/SIG_EL_IGBT_ERR_U" (rect 2930 -464 3102 -448)(font "Arial" ))
-	(pt 3104 -448)
-	(pt 2928 -448)
-)
-(connector
-	(text "EGPIO2" (rect 2610 616 2670 632)(font "Arial" ))
-	(pt 2728 632)
-	(pt 2600 632)
-)
-(connector
 	(text "SIG_RDC1_DIR" (rect 2082 1072 2200 1088)(font "Arial" ))
 	(pt 2064 1088)
 	(pt 2320 1088)
@@ -8173,6 +8066,21 @@ applicable agreement for further details.
 	(text "/INT5" (rect 2162 904 2200 920)(font "Arial" ))
 	(pt 2280 920)
 	(pt 2152 920)
+)
+(connector
+	(text "LED0" (rect 2650 1704 2691 1720)(font "Arial" ))
+	(pt 2784 1720)
+	(pt 2640 1720)
+)
+(connector
+	(text "LED1" (rect 2834 2080 2875 2096)(font "Arial" ))
+	(pt 2952 2096)
+	(pt 2824 2096)
+)
+(connector
+	(text "/INT2" (rect 2258 528 2296 544)(font "Arial" ))
+	(pt 2376 544)
+	(pt 2248 544)
 )
 (junction (pt 1200 88))
 (junction (pt 1200 72))
@@ -8281,4 +8189,3 @@ applicable agreement for further details.
 (text "CLOCK" (rect 1408 880 1547 917)(font "Arial" (font_size 16)(bold)))
 (text "LED OUT" (rect 3040 -560 3211 -523)(font "Arial" (font_size 16)(bold)))
 (text "INTERRUPT" (rect 2368 1560 2587 1597)(font "Arial" (font_size 16)(bold)))
-(text "/SIG_EL_IGBT_ERR_W" (rect 2930 -368 3107 -352)(font "Arial" ))

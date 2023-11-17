@@ -3,51 +3,51 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : -5.472
-TNS   : -21.888
+Slack : -5.460
+TNS   : -21.840
 
 Type  : Setup 'LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : -5.463
-TNS   : -21.852
+Slack : -5.338
+TNS   : -21.352
 
 Type  : Setup 'GCLK0'
-Slack : -5.031
-TNS   : -23.923
+Slack : -5.227
+TNS   : -24.709
 
 Type  : Setup 'LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : -1.377
-TNS   : -5.457
+Slack : -1.386
+TNS   : -5.535
 
 Type  : Hold 'LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : -6.252
-TNS   : -22.179
+Slack : -5.679
+TNS   : -19.887
 
 Type  : Hold 'LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : -4.674
-TNS   : -15.867
+Slack : -5.235
+TNS   : -18.111
 
 Type  : Hold 'GCLK0'
-Slack : -1.931
-TNS   : -4.895
+Slack : -1.806
+TNS   : -4.071
 
 Type  : Hold 'LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : 0.975
+Slack : 0.962
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'GCLK0'
 Slack : -2.289
 TNS   : -2.289
 
-Type  : Minimum Pulse Width 'LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
+Type  : Minimum Pulse Width 'LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
 Slack : -0.198
-TNS   : -1.584
+TNS   : -2.376
 
 Type  : Minimum Pulse Width 'LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : -0.198
-TNS   : -1.584
+Slack : -0.195
+TNS   : -1.560
 
-Type  : Minimum Pulse Width 'LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : -0.179
-TNS   : -2.148
+Type  : Minimum Pulse Width 'LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
+Slack : -0.073
+TNS   : -0.584
 
 ------------------------------------------------------------
