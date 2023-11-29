@@ -1,5 +1,5 @@
 Assembler report for SPB_CPLD
-Fri Nov 17 16:53:18 2023
+Wed Nov 29 16:25:36 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Nov 17 16:53:18 2023 ;
+; Assembler Status      ; Successful - Wed Nov 29 16:25:36 2023 ;
 ; Revision Name         ; SPB_CPLD                              ;
 ; Top-level Entity Name ; SPB_CPLD                              ;
 ; Family                ; MAX II                                ;
@@ -90,8 +90,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                    ;
 +----------------+----------------------------------------------------------------------------+
 ; Device         ; EPM570T144A5                                                               ;
-; JTAG usercode  ; 0x0033BC7F                                                                 ;
-; Checksum       ; 0x0033BCA7                                                                 ;
+; JTAG usercode  ; 0x0033ABE3                                                                 ;
+; Checksum       ; 0x0033AC15                                                                 ;
 +----------------+----------------------------------------------------------------------------+
 
 
@@ -101,14 +101,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 17 16:53:18 2023
+    Info: Processing started: Wed Nov 29 16:25:35 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off SPB_CPLD -c SPB_CPLD
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4525 megabytes
-    Info: Processing ended: Fri Nov 17 16:53:18 2023
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Wed Nov 29 16:25:36 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

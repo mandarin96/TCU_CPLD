@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPB_CPLD
-Fri Nov 17 16:53:13 2023
+Wed Nov 29 16:25:33 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,13 +14,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component
- 13. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component
- 14. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component
- 15. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component
+ 11. Parameter Settings for User Entity Instance: LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component
+ 12. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component
+ 13. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component
+ 14. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component
+ 15. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component
  16. Analysis & Synthesis Messages
 
 
@@ -47,12 +47,12 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Nov 17 16:53:13 2023           ;
+; Analysis & Synthesis Status ; Successful - Wed Nov 29 16:25:33 2023           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; SPB_CPLD                                        ;
 ; Top-level Entity Name       ; SPB_CPLD                                        ;
 ; Family                      ; MAX II                                          ;
-; Total logic elements        ; 45                                              ;
+; Total logic elements        ; 62                                              ;
 ; Total pins                  ; 113                                             ;
 ; Total virtual pins          ; 0                                               ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                   ;
@@ -150,6 +150,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
 ; SPB_CPLD.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/SPB_CPLD.bdf                      ;         ;
 ; LPM_COUNTER10.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd                 ;         ;
+; LPM_COUNTER25.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER25.vhd                 ;         ;
+; LPM_COUNTER20.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER20.vhd                 ;         ;
 ; 74138.bdf                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/74138.bdf             ;         ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
@@ -161,6 +163,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
 ; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; db/cntr_r4k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cntr_r4k.tdf                   ;         ;
+; db/cmpr_2vb.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cmpr_2vb.tdf                   ;         ;
+; db/cntr_6pi.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cntr_6pi.tdf                   ;         ;
 ; db/cntr_r1j.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cntr_r1j.tdf                   ;         ;
 ; db/cmpr_1vb.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cmpr_1vb.tdf                   ;         ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
@@ -171,33 +176,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 45    ;
-;     -- Combinational with no register       ; 21    ;
-;     -- Register only                        ; 10    ;
-;     -- Combinational with a register        ; 14    ;
+; Total logic elements                        ; 62    ;
+;     -- Combinational with no register       ; 27    ;
+;     -- Register only                        ; 9     ;
+;     -- Combinational with a register        ; 26    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 13    ;
-;     -- 3 input functions                    ; 1     ;
-;     -- 2 input functions                    ; 15    ;
+;     -- 4 input functions                    ; 15    ;
+;     -- 3 input functions                    ; 9     ;
+;     -- 2 input functions                    ; 23    ;
 ;     -- 1 input functions                    ; 5     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 33    ;
-;     -- arithmetic mode                      ; 12    ;
+;     -- normal mode                          ; 36    ;
+;     -- arithmetic mode                      ; 26    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 12    ;
-;     -- asynchronous clear/load mode         ; 0     ;
+;     -- synchronous clear/load mode          ; 21    ;
+;     -- asynchronous clear/load mode         ; 10    ;
 ;                                             ;       ;
-; Total registers                             ; 24    ;
-; Total logic cells in carry chains           ; 15    ;
+; Total registers                             ; 35    ;
+; Total logic cells in carry chains           ; 32    ;
 ; I/O pins                                    ; 113   ;
 ; Maximum fan-out node                        ; ~GND  ;
-; Maximum fan-out                             ; 12    ;
-; Total fan-out                               ; 164   ;
-; Average fan-out                             ; 1.04  ;
+; Maximum fan-out                             ; 21    ;
+; Total fan-out                               ; 240   ;
+; Average fan-out                             ; 1.37  ;
 +---------------------------------------------+-------+
 
 
@@ -206,9 +211,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                     ; Library Name ;
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
-; |SPB_CPLD                                 ; 45 (21)     ; 24           ; 0          ; 113  ; 0            ; 21 (9)       ; 10 (10)           ; 14 (2)           ; 15 (0)          ; 0 (0)      ; |SPB_CPLD                                                                                               ; work         ;
+; |SPB_CPLD                                 ; 62 (16)     ; 35           ; 0          ; 113  ; 0            ; 27 (7)       ; 9 (9)             ; 26 (0)           ; 32 (0)          ; 0 (0)      ; |SPB_CPLD                                                                                               ; work         ;
 ;    |74138:inst12|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst12                                                                                  ; work         ;
-;    |74138:inst1|                          ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst1                                                                                   ; work         ;
+;    |74138:inst1|                          ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst1                                                                                   ; work         ;
 ;    |LPM_COUNTER10:inst10|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10                                                                          ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component                                        ; work         ;
 ;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
@@ -221,6 +226,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component                                        ; work         ;
 ;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
 ;             |cmpr_1vb:cmpr1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1 ; work         ;
+;    |LPM_COUNTER10:inst17|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst17                                                                          ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component                                        ; work         ;
+;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
+;             |cmpr_1vb:cmpr1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1 ; work         ;
+;    |LPM_COUNTER20:inst8|                  ; 6 (0)       ; 5            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8                                                                           ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 5            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component                                         ; work         ;
+;          |cntr_6pi:auto_generated|        ; 6 (6)       ; 5            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated                 ; work         ;
+;    |LPM_COUNTER25:inst23|                 ; 9 (0)       ; 5            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER25:inst23                                                                          ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 9 (0)       ; 5            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component                                        ; work         ;
+;          |cntr_r4k:auto_generated|        ; 9 (7)       ; 5            ; 0          ; 0    ; 0            ; 4 (2)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated                ; work         ;
+;             |cmpr_2vb:cmpr1|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|cmpr_2vb:cmpr1 ; work         ;
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -230,35 +246,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                                           ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER20:inst8  ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER20.vhd ;
 ; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst10 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
 ; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst11 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
 ; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst16 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
 ; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER10:inst17 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER10.vhd ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |SPB_CPLD|LPM_COUNTER25:inst23 ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/LPM_COUNTER25.vhd ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                ;
-+---------------------------------------------------------------------------------------------+---------------------+
-; Register name                                                                               ; Reason for Removal  ;
-+---------------------------------------------------------------------------------------------+---------------------+
-; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0..3] ; Lost fanout         ;
-; inst142                                                                                     ; Merged with inst145 ;
-; inst146                                                                                     ; Merged with inst143 ;
-; inst144                                                                                     ; Merged with inst147 ;
-; Total Number of Removed Registers = 7                                                       ;                     ;
-+---------------------------------------------------------------------------------------------+---------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                               ;
-+------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
-; Register name                                                                            ; Reason for Removal ; Registers Removed due to This Register                                                    ;
-+------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
-; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0] ; Lost Fanouts       ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[1], ;
-;                                                                                          ;                    ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[2], ;
-;                                                                                          ;                    ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[3]  ;
-+------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -266,14 +260,95 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 24    ;
+; Total registers                              ; 35    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 12    ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+--------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                         ;
++------------------------+-------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 5           ; Signed Integer                                               ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
+; LPM_MODULUS            ; 25          ; Signed Integer                                               ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
+; CBXI_PARAMETER         ; cntr_r4k    ; Untyped                                                      ;
++------------------------+-------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+-------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                        ;
++------------------------+-------------+-------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
+; LPM_WIDTH              ; 5           ; Signed Integer                                              ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                     ;
+; LPM_MODULUS            ; 0           ; Untyped                                                     ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                     ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                          ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                          ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                     ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                     ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                     ;
+; CBXI_PARAMETER         ; cntr_6pi    ; Untyped                                                     ;
++------------------------+-------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+--------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                         ;
++------------------------+-------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
+; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
+; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
++------------------------+-------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -357,40 +432,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component ;
-+------------------------+-------------+--------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                         ;
-+------------------------+-------------+--------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
-; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
-; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
-; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
-; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
-; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
-+------------------------+-------------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 17 16:53:11 2023
+    Info: Processing started: Wed Nov 29 16:25:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPB_CPLD -c SPB_CPLD
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file spb_cpld.bdf
@@ -404,8 +452,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file lpm_shi
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_counter4.vhd
     Info (12022): Found design unit 1: lpm_counter4-SYN
     Info (12023): Found entity 1: LPM_COUNTER4
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_counter25.vhd
+    Info (12022): Found design unit 1: lpm_counter25-SYN
+    Info (12023): Found entity 1: LPM_COUNTER25
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_counter20.vhd
+    Info (12022): Found design unit 1: lpm_counter20-SYN
+    Info (12023): Found entity 1: LPM_COUNTER20
 Info (12127): Elaborating entity "SPB_CPLD" for the top level hierarchy
-Warning (275011): Block or symbol "SOFT" of instance "inst28" overlaps another block or symbol
 Warning (275089): Not all bits in bus "BF_A[0..19]" are used
 Warning (275080): Converted elements in bus name "BF_A" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "BF_A[0..4]" to "BF_A0..4"
@@ -415,8 +468,6 @@ Warning (275043): Pin "LED_JOY_SLOW" is missing source
 Warning (275043): Pin "LED_DCU_POWER" is missing source
 Warning (275043): Pin "SIG_X_/RD" is missing source
 Warning (275043): Pin "SIG_X_/WR" is missing source
-Warning (275043): Pin "SPI_CLK_TX" is missing source
-Warning (275043): Pin "SPI_CLK_RX" is missing source
 Warning (275043): Pin "LED2" is missing source
 Warning (275043): Pin "LED3" is missing source
 Warning (275043): Pin "LED4" is missing source
@@ -448,6 +499,8 @@ Warning (275009): Pin "/SIG_EL_IGBT_ERR_U" not connected
 Warning (275009): Pin "/SIG_EL_IGBT_ERR_V" not connected
 Warning (275009): Pin "/SIG_EL_IGBT_ERR_W" not connected
 Warning (275009): Pin "/SIG_AZ_LOCKING_SW" not connected
+Warning (275009): Pin "/SIG_EMER_SIG" not connected
+Warning (275009): Pin "/SIG_DCU_MODE1_SW" not connected
 Warning (275009): Pin "/SIG_DCU_MODE2_SW" not connected
 Warning (275009): Pin "/SIG_DCU_PC_ON_SIG" not connected
 Warning (275009): Pin "/SIG_JOY_SLOW_SW" not connected
@@ -455,11 +508,12 @@ Warning (275009): Pin "/SIG_JOY_FAST_SW" not connected
 Warning (275009): Pin "/SIG_JOY_OPER_SW" not connected
 Warning (275009): Pin "SIG_RDC1_LOT" not connected
 Warning (275009): Pin "SIG_RDC1_DOS" not connected
+Warning (275009): Pin "SIG_RDC2_LOT" not connected
+Warning (275009): Pin "SIG_RDC2_DOS" not connected
 Warning (275009): Pin "SIG_ADC1_/ELOC" not connected
 Warning (275009): Pin "SIG_ADC2_/ELOC" not connected
 Warning (275009): Pin "SIG_ADC3_/ELOC" not connected
 Warning (275009): Pin "SIG_ADC4_/ELOC" not connected
-Warning (275009): Pin "SPI_CLK_START" not connected
 Warning (275009): Pin "/EM1WE" not connected
 Warning (275009): Pin "EM1WAIT" not connected
 Warning (275009): Pin "/SIG_EL_LOCKING_SW" not connected
@@ -485,6 +539,15 @@ Warning (275008): Primitive "DFF" of instance "inst123" not used
 Warning (275008): Primitive "DFF" of instance "inst124" not used
 Warning (275008): Primitive "DFF" of instance "inst125" not used
 Warning (275008): Primitive "DFF" of instance "inst126" not used
+Warning (275008): Primitive "DFF" of instance "inst139" not used
+Warning (275008): Primitive "DFF" of instance "inst140" not used
+Warning (275008): Primitive "DFF" of instance "inst141" not used
+Warning (275008): Primitive "DFF" of instance "inst142" not used
+Warning (275008): Primitive "DFF" of instance "inst143" not used
+Warning (275008): Primitive "DFF" of instance "inst144" not used
+Warning (275008): Primitive "DFF" of instance "inst145" not used
+Warning (275008): Primitive "DFF" of instance "inst146" not used
+Warning (275008): Primitive "DFF" of instance "inst147" not used
 Warning (275008): Primitive "GND" of instance "inst2" not used
 Warning (275008): Primitive "AND4" of instance "inst30" not used
 Warning (275008): Primitive "NOT" of instance "inst31" not used
@@ -497,15 +560,48 @@ Warning (275008): Primitive "NOT" of instance "inst40" not used
 Warning (275008): Primitive "NOT" of instance "inst42" not used
 Warning (275008): Primitive "AND4" of instance "inst43" not used
 Warning (275008): Primitive "NOT" of instance "inst44" not used
+Warning (275008): Primitive "AND4" of instance "inst45" not used
+Warning (275008): Primitive "NOT" of instance "inst46" not used
+Warning (275008): Primitive "XOR" of instance "inst47" not used
+Warning (275008): Primitive "NOT" of instance "inst48" not used
+Warning (275008): Primitive "NOT" of instance "inst49" not used
+Warning (275008): Primitive "XOR" of instance "inst50" not used
+Warning (275008): Primitive "OR2" of instance "inst51" not used
 Warning (275008): Primitive "AND4" of instance "inst9" not used
 Warning (275008): Primitive "DFF" of instance "inst93" not used
 Warning (275008): Primitive "DFF" of instance "inst94" not used
 Info (12128): Elaborating entity "74138" for hierarchy "74138:inst12"
 Info (12130): Elaborated megafunction instantiation "74138:inst12"
-Info (12128): Elaborating entity "LPM_COUNTER10" for hierarchy "LPM_COUNTER10:inst16"
-Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component"
-Info (12130): Elaborated megafunction instantiation "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component"
-Info (12133): Instantiated megafunction "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component" with the following parameter:
+Info (12128): Elaborating entity "LPM_COUNTER25" for hierarchy "LPM_COUNTER25:inst23"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "25"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r4k.tdf
+    Info (12023): Found entity 1: cntr_r4k
+Info (12128): Elaborating entity "cntr_r4k" for hierarchy "LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_2vb.tdf
+    Info (12023): Found entity 1: cmpr_2vb
+Info (12128): Elaborating entity "cmpr_2vb" for hierarchy "LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|cmpr_2vb:cmpr1"
+Info (12128): Elaborating entity "LPM_COUNTER20" for hierarchy "LPM_COUNTER20:inst8"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6pi.tdf
+    Info (12023): Found entity 1: cntr_6pi
+Info (12128): Elaborating entity "cntr_6pi" for hierarchy "LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated"
+Info (12128): Elaborating entity "LPM_COUNTER10" for hierarchy "LPM_COUNTER10:inst17"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
     Info (12134): Parameter "lpm_modulus" = "10"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
@@ -513,22 +609,22 @@ Info (12133): Instantiated megafunction "LPM_COUNTER10:inst16|lpm_counter:LPM_CO
     Info (12134): Parameter "lpm_width" = "4"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r1j.tdf
     Info (12023): Found entity 1: cntr_r1j
-Info (12128): Elaborating entity "cntr_r1j" for hierarchy "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated"
+Info (12128): Elaborating entity "cntr_r1j" for hierarchy "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_1vb.tdf
     Info (12023): Found entity 1: cmpr_1vb
-Info (12128): Elaborating entity "cmpr_1vb" for hierarchy "LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1"
-Info (13014): Ignored 4 buffer(s)
-    Info (13019): Ignored 4 SOFT buffer(s)
+Info (12128): Elaborating entity "cmpr_1vb" for hierarchy "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1"
+Info (13014): Ignored 3 buffer(s)
+    Info (13019): Ignored 3 SOFT buffer(s)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "/INT4" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "/INT5" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO0" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO1" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
-    Warning (13040): Bidir "/INT2" has no driver
     Warning (13040): Bidir "/INT0" has no driver
     Warning (13040): Bidir "/INT1" has no driver
+    Warning (13040): Bidir "/INT2" has no driver
     Warning (13040): Bidir "/INT3" has no driver
+    Warning (13040): Bidir "/INT4" has no driver
+    Warning (13040): Bidir "/INT5" has no driver
     Warning (13040): Bidir "EGPIO2" has no driver
     Warning (13040): Bidir "BF_D" has no driver
     Warning (13040): Bidir "BF_D" has no driver
@@ -547,8 +643,6 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "BF_D" has no driver
     Warning (13040): Bidir "BF_D" has no driver
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "/INT4~synth"
-    Warning (13010): Node "/INT5~synth"
     Warning (13010): Node "EGPIO0~synth"
     Warning (13010): Node "EGPIO1~synth"
 Warning (13024): Output pins are stuck at VCC or GND
@@ -558,8 +652,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SIG_DAC_/CLR" is stuck at VCC
     Warning (13410): Pin "SIG_X_/RD" is stuck at GND
     Warning (13410): Pin "SIG_X_/WR" is stuck at GND
-    Warning (13410): Pin "SPI_CLK_TX" is stuck at GND
-    Warning (13410): Pin "SPI_CLK_RX" is stuck at GND
     Warning (13410): Pin "LED2" is stuck at GND
     Warning (13410): Pin "LED3" is stuck at GND
     Warning (13410): Pin "LED4" is stuck at GND
@@ -567,9 +659,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED6" is stuck at GND
     Warning (13410): Pin "LED7" is stuck at GND
     Warning (13410): Pin "SIG_RDC_/RESET" is stuck at VCC
-Warning (18029): Output pin "SIG_ADC2_/CS" driven by bidirectional pin "/INT2" cannot be tri-stated
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Warning (21074): Design contains 44 input pin(s) that do not drive logic
+Warning (21074): Design contains 47 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/SIG_MDU_CABLE_LOOP"
     Warning (15610): No output dependent on input pin "/SIG_PCU_CABLE_LOOP"
     Warning (15610): No output dependent on input pin "/SIG_OCU_CABLE_LOOP"
@@ -595,6 +685,8 @@ Warning (21074): Design contains 44 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/SIG_EL_IGBT_ERR_V"
     Warning (15610): No output dependent on input pin "/SIG_EL_IGBT_ERR_W"
     Warning (15610): No output dependent on input pin "/SIG_AZ_LOCKING_SW"
+    Warning (15610): No output dependent on input pin "/SIG_EMER_SIG"
+    Warning (15610): No output dependent on input pin "/SIG_DCU_MODE1_SW"
     Warning (15610): No output dependent on input pin "/SIG_DCU_MODE2_SW"
     Warning (15610): No output dependent on input pin "/SIG_DCU_PC_ON_SIG"
     Warning (15610): No output dependent on input pin "/SIG_JOY_SLOW_SW"
@@ -602,11 +694,12 @@ Warning (21074): Design contains 44 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/SIG_JOY_OPER_SW"
     Warning (15610): No output dependent on input pin "SIG_RDC1_LOT"
     Warning (15610): No output dependent on input pin "SIG_RDC1_DOS"
+    Warning (15610): No output dependent on input pin "SIG_RDC2_LOT"
+    Warning (15610): No output dependent on input pin "SIG_RDC2_DOS"
     Warning (15610): No output dependent on input pin "SIG_ADC1_/ELOC"
     Warning (15610): No output dependent on input pin "SIG_ADC2_/ELOC"
     Warning (15610): No output dependent on input pin "SIG_ADC3_/ELOC"
     Warning (15610): No output dependent on input pin "SIG_ADC4_/ELOC"
-    Warning (15610): No output dependent on input pin "SPI_CLK_START"
     Warning (15610): No output dependent on input pin "/EM1WE"
     Warning (15610): No output dependent on input pin "EM1WAIT"
     Warning (15610): No output dependent on input pin "/SIG_EL_LOCKING_SW"
@@ -614,14 +707,14 @@ Warning (21074): Design contains 44 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SIG_DAC2_/LDAC"
     Warning (15610): No output dependent on input pin "BF_A3"
     Warning (15610): No output dependent on input pin "BF_A4"
-Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 175 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 61 input pins
     Info (21059): Implemented 27 output pins
     Info (21060): Implemented 25 bidirectional pins
-    Info (21061): Implemented 45 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 190 warnings
+    Info (21061): Implemented 62 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 204 warnings
     Info: Peak virtual memory: 4633 megabytes
-    Info: Processing ended: Fri Nov 17 16:53:13 2023
+    Info: Processing ended: Wed Nov 29 16:25:33 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:00
 
