@@ -61,6 +61,7 @@ ARCHITECTURE SYN OF lpm_counter20 IS
 	COMPONENT lpm_counter
 	GENERIC (
 		lpm_direction		: STRING;
+		lpm_modulus		: NATURAL;
 		lpm_port_updown		: STRING;
 		lpm_type		: STRING;
 		lpm_width		: NATURAL
@@ -81,6 +82,7 @@ BEGIN
 	LPM_COUNTER_component : LPM_COUNTER
 	GENERIC MAP (
 		lpm_direction => "UP",
+		lpm_modulus => 10,
 		lpm_port_updown => "PORT_UNUSED",
 		lpm_type => "LPM_COUNTER",
 		lpm_width => 5
@@ -110,8 +112,8 @@ END SYN;
 -- Retrieval info: PRIVATE: CarryOut NUMERIC "1"
 -- Retrieval info: PRIVATE: Direction NUMERIC "0"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "MAX II"
--- Retrieval info: PRIVATE: ModulusCounter NUMERIC "0"
--- Retrieval info: PRIVATE: ModulusValue NUMERIC "0"
+-- Retrieval info: PRIVATE: ModulusCounter NUMERIC "1"
+-- Retrieval info: PRIVATE: ModulusValue NUMERIC "10"
 -- Retrieval info: PRIVATE: SCLR NUMERIC "0"
 -- Retrieval info: PRIVATE: SLOAD NUMERIC "0"
 -- Retrieval info: PRIVATE: SSET NUMERIC "0"
@@ -121,6 +123,7 @@ END SYN;
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: CONSTANT: LPM_DIRECTION STRING "UP"
+-- Retrieval info: CONSTANT: LPM_MODULUS NUMERIC "10"
 -- Retrieval info: CONSTANT: LPM_PORT_UPDOWN STRING "PORT_UNUSED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "5"

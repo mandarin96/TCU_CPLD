@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPB_CPLD
-Wed Nov 29 16:25:33 2023
+Mon Dec 04 16:49:45 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,14 +14,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component
- 11. Parameter Settings for User Entity Instance: LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component
- 12. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component
- 13. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component
+ 13. Parameter Settings for User Entity Instance: LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component
  14. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component
  15. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component
- 16. Analysis & Synthesis Messages
+ 16. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component
+ 17. Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -47,12 +49,12 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Nov 29 16:25:33 2023           ;
+; Analysis & Synthesis Status ; Successful - Mon Dec 04 16:49:45 2023           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; SPB_CPLD                                        ;
 ; Top-level Entity Name       ; SPB_CPLD                                        ;
 ; Family                      ; MAX II                                          ;
-; Total logic elements        ; 62                                              ;
+; Total logic elements        ; 53                                              ;
 ; Total pins                  ; 113                                             ;
 ; Total virtual pins          ; 0                                               ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                   ;
@@ -165,7 +167,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
 ; db/cntr_r4k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cntr_r4k.tdf                   ;         ;
 ; db/cmpr_2vb.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cmpr_2vb.tdf                   ;         ;
-; db/cntr_6pi.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cntr_6pi.tdf                   ;         ;
+; db/cntr_l4k.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cntr_l4k.tdf                   ;         ;
 ; db/cntr_r1j.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cntr_r1j.tdf                   ;         ;
 ; db/cmpr_1vb.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DEV_W8V/Documents/git/TCU_CPLD/db/cmpr_1vb.tdf                   ;         ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
@@ -176,33 +178,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 62    ;
-;     -- Combinational with no register       ; 27    ;
+; Total logic elements                        ; 53    ;
+;     -- Combinational with no register       ; 26    ;
 ;     -- Register only                        ; 9     ;
-;     -- Combinational with a register        ; 26    ;
+;     -- Combinational with a register        ; 18    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 15    ;
+;     -- 4 input functions                    ; 14    ;
 ;     -- 3 input functions                    ; 9     ;
-;     -- 2 input functions                    ; 23    ;
-;     -- 1 input functions                    ; 5     ;
+;     -- 2 input functions                    ; 18    ;
+;     -- 1 input functions                    ; 2     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 36    ;
-;     -- arithmetic mode                      ; 26    ;
+;     -- normal mode                          ; 35    ;
+;     -- arithmetic mode                      ; 18    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 21    ;
+;     -- synchronous clear/load mode          ; 18    ;
 ;     -- asynchronous clear/load mode         ; 10    ;
 ;                                             ;       ;
-; Total registers                             ; 35    ;
-; Total logic cells in carry chains           ; 32    ;
+; Total registers                             ; 27    ;
+; Total logic cells in carry chains           ; 22    ;
 ; I/O pins                                    ; 113   ;
 ; Maximum fan-out node                        ; ~GND  ;
-; Maximum fan-out                             ; 21    ;
-; Total fan-out                               ; 240   ;
-; Average fan-out                             ; 1.37  ;
+; Maximum fan-out                             ; 18    ;
+; Total fan-out                               ; 209   ;
+; Average fan-out                             ; 1.26  ;
 +---------------------------------------------+-------+
 
 
@@ -211,7 +213,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                     ; Library Name ;
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
-; |SPB_CPLD                                 ; 62 (16)     ; 35           ; 0          ; 113  ; 0            ; 27 (7)       ; 9 (9)             ; 26 (0)           ; 32 (0)          ; 0 (0)      ; |SPB_CPLD                                                                                               ; work         ;
+; |SPB_CPLD                                 ; 53 (16)     ; 27           ; 0          ; 113  ; 0            ; 26 (7)       ; 9 (9)             ; 18 (0)           ; 22 (0)          ; 0 (0)      ; |SPB_CPLD                                                                                               ; work         ;
 ;    |74138:inst12|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst12                                                                                  ; work         ;
 ;    |74138:inst1|                          ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst1                                                                                   ; work         ;
 ;    |LPM_COUNTER10:inst10|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10                                                                          ; work         ;
@@ -222,17 +224,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component                                        ; work         ;
 ;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
 ;             |cmpr_1vb:cmpr1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1 ; work         ;
-;    |LPM_COUNTER10:inst16|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16                                                                          ; work         ;
-;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component                                        ; work         ;
-;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
-;             |cmpr_1vb:cmpr1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1 ; work         ;
-;    |LPM_COUNTER10:inst17|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst17                                                                          ; work         ;
-;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component                                        ; work         ;
-;          |cntr_r1j:auto_generated|        ; 6 (5)       ; 4            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated                ; work         ;
-;             |cmpr_1vb:cmpr1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1 ; work         ;
-;    |LPM_COUNTER20:inst8|                  ; 6 (0)       ; 5            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8                                                                           ; work         ;
-;       |lpm_counter:LPM_COUNTER_component| ; 6 (0)       ; 5            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component                                         ; work         ;
-;          |cntr_6pi:auto_generated|        ; 6 (6)       ; 5            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated                 ; work         ;
+;    |LPM_COUNTER20:inst8|                  ; 9 (0)       ; 5            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8                                                                           ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 9 (0)       ; 5            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component                                         ; work         ;
+;          |cntr_l4k:auto_generated|        ; 9 (7)       ; 5            ; 0          ; 0    ; 0            ; 4 (2)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_l4k:auto_generated                 ; work         ;
+;             |cmpr_2vb:cmpr1|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_l4k:auto_generated|cmpr_2vb:cmpr1  ; work         ;
 ;    |LPM_COUNTER25:inst23|                 ; 9 (0)       ; 5            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER25:inst23                                                                          ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component| ; 9 (0)       ; 5            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 5 (0)            ; 6 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component                                        ; work         ;
 ;          |cntr_r4k:auto_generated|        ; 9 (7)       ; 5            ; 0          ; 0    ; 0            ; 4 (2)        ; 0 (0)             ; 5 (5)            ; 6 (6)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated                ; work         ;
@@ -255,14 +250,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                               ;
++---------------------------------------------------------------------------------------------+--------------------+
+; Register name                                                                               ; Reason for Removal ;
++---------------------------------------------------------------------------------------------+--------------------+
+; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0..3] ; Lost fanout        ;
+; LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0..3] ; Lost fanout        ;
+; Total Number of Removed Registers = 8                                                       ;                    ;
++---------------------------------------------------------------------------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                               ;
++------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+; Register name                                                                            ; Reason for Removal ; Registers Removed due to This Register                                                    ;
++------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0] ; Lost Fanouts       ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[1], ;
+;                                                                                          ;                    ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[2], ;
+;                                                                                          ;                    ; LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[3], ;
+;                                                                                          ;                    ; LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0], ;
+;                                                                                          ;                    ; LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[1], ;
+;                                                                                          ;                    ; LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[2], ;
+;                                                                                          ;                    ; LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[3]  ;
++------------------------------------------------------------------------------------------+--------------------+-------------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 35    ;
+; Total registers                              ; 27    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Synchronous Load   ; 18    ;
 ; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
@@ -308,7 +329,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
 ; LPM_WIDTH              ; 5           ; Signed Integer                                              ;
 ; LPM_DIRECTION          ; UP          ; Untyped                                                     ;
-; LPM_MODULUS            ; 0           ; Untyped                                                     ;
+; LPM_MODULUS            ; 10          ; Signed Integer                                              ;
 ; LPM_AVALUE             ; UNUSED      ; Untyped                                                     ;
 ; LPM_SVALUE             ; UNUSED      ; Untyped                                                     ;
 ; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                     ;
@@ -319,62 +340,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CARRY_CNT_EN           ; SMART       ; Untyped                                                     ;
 ; LABWIDE_SCLR           ; ON          ; Untyped                                                     ;
 ; USE_NEW_VERSION        ; TRUE        ; Untyped                                                     ;
-; CBXI_PARAMETER         ; cntr_6pi    ; Untyped                                                     ;
+; CBXI_PARAMETER         ; cntr_l4k    ; Untyped                                                     ;
 +------------------------+-------------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component ;
-+------------------------+-------------+--------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                         ;
-+------------------------+-------------+--------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
-; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
-; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
-; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
-; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
-; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
-+------------------------+-------------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component ;
-+------------------------+-------------+--------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                         ;
-+------------------------+-------------+--------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
-; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
-; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
-; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
-; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
-; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
-+------------------------+-------------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -432,13 +399,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst16|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+--------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                         ;
++------------------------+-------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
+; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
+; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
++------------------------+-------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+--------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                         ;
++------------------------+-------------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                               ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                      ;
+; LPM_MODULUS            ; 10          ; Signed Integer                                               ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                      ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                           ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                           ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                      ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                      ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                      ;
+; CBXI_PARAMETER         ; cntr_r1j    ; Untyped                                                      ;
++------------------------+-------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 29 16:25:31 2023
+    Info: Processing started: Mon Dec 04 16:49:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPB_CPLD -c SPB_CPLD
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file spb_cpld.bdf
@@ -592,16 +613,17 @@ Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_COUNTER20:inst
 Info (12130): Elaborated megafunction instantiation "LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component"
 Info (12133): Instantiated megafunction "LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "10"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
     Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
     Info (12134): Parameter "lpm_width" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6pi.tdf
-    Info (12023): Found entity 1: cntr_6pi
-Info (12128): Elaborating entity "cntr_6pi" for hierarchy "LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_6pi:auto_generated"
-Info (12128): Elaborating entity "LPM_COUNTER10" for hierarchy "LPM_COUNTER10:inst17"
-Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component"
-Info (12130): Elaborated megafunction instantiation "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component"
-Info (12133): Instantiated megafunction "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component" with the following parameter:
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_l4k.tdf
+    Info (12023): Found entity 1: cntr_l4k
+Info (12128): Elaborating entity "cntr_l4k" for hierarchy "LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_l4k:auto_generated"
+Info (12128): Elaborating entity "LPM_COUNTER10" for hierarchy "LPM_COUNTER10:inst11"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
     Info (12134): Parameter "lpm_modulus" = "10"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
@@ -609,10 +631,10 @@ Info (12133): Instantiated megafunction "LPM_COUNTER10:inst17|lpm_counter:LPM_CO
     Info (12134): Parameter "lpm_width" = "4"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r1j.tdf
     Info (12023): Found entity 1: cntr_r1j
-Info (12128): Elaborating entity "cntr_r1j" for hierarchy "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated"
+Info (12128): Elaborating entity "cntr_r1j" for hierarchy "LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_1vb.tdf
     Info (12023): Found entity 1: cmpr_1vb
-Info (12128): Elaborating entity "cmpr_1vb" for hierarchy "LPM_COUNTER10:inst17|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1"
+Info (12128): Elaborating entity "cmpr_1vb" for hierarchy "LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1"
 Info (13014): Ignored 3 buffer(s)
     Info (13019): Ignored 3 SOFT buffer(s)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
@@ -659,6 +681,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED6" is stuck at GND
     Warning (13410): Pin "LED7" is stuck at GND
     Warning (13410): Pin "SIG_RDC_/RESET" is stuck at VCC
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Warning (21074): Design contains 47 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/SIG_MDU_CABLE_LOOP"
     Warning (15610): No output dependent on input pin "/SIG_PCU_CABLE_LOOP"
@@ -707,14 +730,14 @@ Warning (21074): Design contains 47 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SIG_DAC2_/LDAC"
     Warning (15610): No output dependent on input pin "BF_A3"
     Warning (15610): No output dependent on input pin "BF_A4"
-Info (21057): Implemented 175 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 166 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 61 input pins
     Info (21059): Implemented 27 output pins
     Info (21060): Implemented 25 bidirectional pins
-    Info (21061): Implemented 62 logic cells
+    Info (21061): Implemented 53 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 204 warnings
     Info: Peak virtual memory: 4633 megabytes
-    Info: Processing ended: Wed Nov 29 16:25:33 2023
+    Info: Processing ended: Mon Dec 04 16:49:45 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:00
 

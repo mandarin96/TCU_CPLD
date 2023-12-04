@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Nov 29 16:25:35 2023
+Fitter Status : Successful - Mon Dec 04 16:49:48 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : SPB_CPLD
 Top-level Entity Name : SPB_CPLD
 Family : MAX II
 Device : EPM570T144A5
 Timing Models : Final
-Total logic elements : 59 / 570 ( 10 % )
+Total logic elements : 50 / 570 ( 9 % )
 Total pins : 113 / 116 ( 97 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
