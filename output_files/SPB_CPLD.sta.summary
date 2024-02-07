@@ -3,20 +3,20 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : -7.421
-TNS   : -37.105
+Slack : -6.639
+TNS   : -36.404
 
 Type  : Setup 'GCLK0'
-Slack : -6.843
-TNS   : -59.733
+Slack : -6.249
+TNS   : -55.170
 
 Type  : Setup 'LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
 Slack : -5.660
 TNS   : -22.640
 
 Type  : Setup 'LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[0]'
-Slack : -3.712
-TNS   : -6.813
+Slack : -2.719
+TNS   : -5.041
 
 Type  : Hold 'LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
 Slack : -6.108
@@ -24,14 +24,14 @@ TNS   : -21.279
 
 Type  : Hold 'GCLK0'
 Slack : -1.931
-TNS   : -10.073
+TNS   : -10.078
 
 Type  : Hold 'LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
-Slack : 1.507
+Slack : 0.755
 TNS   : 0.000
 
 Type  : Hold 'LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[0]'
-Slack : 1.772
+Slack : 1.340
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'GCLK0'
@@ -40,14 +40,14 @@ TNS   : -2.289
 
 Type  : Minimum Pulse Width 'LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
 Slack : -0.410
-TNS   : -5.828
+TNS   : -9.152
 
 Type  : Minimum Pulse Width 'LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[0]'
 Slack : -0.198
 TNS   : -1.584
 
 Type  : Minimum Pulse Width 'LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[0]'
-Slack : 0.190
+Slack : 0.197
 TNS   : 0.000
 
 ------------------------------------------------------------

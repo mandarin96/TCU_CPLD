@@ -146,8 +146,8 @@ EM1WAIT                      : 79        : input  : 3.3-V LVTTL       :         
 VCCIO2                       : 82        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 83        : gnd    :                   :         :           :                
 /EM1CS4                      : 84        : input  : 3.3-V LVTTL       :         : 2         : Y              
-/INT0                        : 85        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-/INT1                        : 86        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
+/INT0                        : 85        : input  : 3.3-V LVTTL       :         : 2         : Y              
+/INT1                        : 86        : input  : 3.3-V LVTTL       :         : 2         : Y              
 /INT2                        : 87        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 /INT3                        : 88        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 EGPIO0                       : 89        : bidir  : 3.3-V LVTTL       :         : 2         : Y              

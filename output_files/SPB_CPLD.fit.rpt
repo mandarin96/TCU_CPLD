@@ -1,5 +1,5 @@
 Fitter report for SPB_CPLD
-Mon Dec 04 18:18:03 2023
+Mon Feb 05 10:24:13 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -30,10 +30,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  22. LAB Signals Sourced Out
  23. LAB Distinct Inputs
  24. Fitter Device Options
- 25. Estimated Delay Added for Hold Timing Summary
- 26. Estimated Delay Added for Hold Timing Details
- 27. Fitter Messages
- 28. Fitter Suppressed Messages
+ 25. Fitter Messages
+ 26. Fitter Suppressed Messages
 
 
 
@@ -59,14 +57,14 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Fitter Summary                                                              ;
 +---------------------------+-------------------------------------------------+
-; Fitter Status             ; Successful - Mon Dec 04 18:18:03 2023           ;
+; Fitter Status             ; Successful - Mon Feb 05 10:24:13 2024           ;
 ; Quartus II 64-Bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name             ; SPB_CPLD                                        ;
 ; Top-level Entity Name     ; SPB_CPLD                                        ;
 ; Family                    ; MAX II                                          ;
 ; Device                    ; EPM570T144A5                                    ;
 ; Timing Models             ; Final                                           ;
-; Total logic elements      ; 50 / 570 ( 9 % )                                ;
+; Total logic elements      ; 53 / 570 ( 9 % )                                ;
 ; Total pins                ; 113 / 116 ( 97 % )                              ;
 ; Total virtual pins        ; 0                                               ;
 ; UFM blocks                ; 0 / 1 ( 0 % )                                   ;
@@ -144,28 +142,28 @@ The pin-out file can be found in C:/Users/DEV_W8V/Documents/git/TCU_CPLD/output_
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Total logic elements                        ; 50 / 570 ( 9 % )   ;
+; Total logic elements                        ; 53 / 570 ( 9 % )   ;
 ;     -- Combinational with no register       ; 23                 ;
-;     -- Register only                        ; 6                  ;
-;     -- Combinational with a register        ; 21                 ;
+;     -- Register only                        ; 7                  ;
+;     -- Combinational with a register        ; 23                 ;
 ;                                             ;                    ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 14                 ;
+;     -- 4 input functions                    ; 15                 ;
 ;     -- 3 input functions                    ; 9                  ;
 ;     -- 2 input functions                    ; 18                 ;
-;     -- 1 input functions                    ; 2                  ;
+;     -- 1 input functions                    ; 3                  ;
 ;     -- 0 input functions                    ; 1                  ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 32                 ;
+;     -- normal mode                          ; 35                 ;
 ;     -- arithmetic mode                      ; 18                 ;
-;     -- qfbk mode                            ; 2                  ;
+;     -- qfbk mode                            ; 3                  ;
 ;     -- register cascade mode                ; 0                  ;
-;     -- synchronous clear/load mode          ; 25                 ;
+;     -- synchronous clear/load mode          ; 26                 ;
 ;     -- asynchronous clear/load mode         ; 10                 ;
 ;                                             ;                    ;
-; Total registers                             ; 27 / 570 ( 5 % )   ;
-; Total LABs                                  ; 9 / 57 ( 16 % )    ;
+; Total registers                             ; 30 / 570 ( 5 % )   ;
+; Total LABs                                  ; 10 / 57 ( 18 % )   ;
 ; Logic elements in carry chains              ; 22                 ;
 ; Virtual pins                                ; 0                  ;
 ; I/O pins                                    ; 113 / 116 ( 97 % ) ;
@@ -179,8 +177,8 @@ The pin-out file can be found in C:/Users/DEV_W8V/Documents/git/TCU_CPLD/output_
 ; Peak interconnect usage (total/H/V)         ; 3% / 3% / 2%       ;
 ; Maximum fan-out                             ; 22                 ;
 ; Highest non-global fan-out                  ; 22                 ;
-; Total fan-out                               ; 206                ;
-; Average fan-out                             ; 1.26               ;
+; Total fan-out                               ; 215                ;
+; Average fan-out                             ; 1.30               ;
 +---------------------------------------------+--------------------+
 
 
@@ -194,6 +192,8 @@ The pin-out file can be found in C:/Users/DEV_W8V/Documents/git/TCU_CPLD/output_
 ; /EM1CS4                ; 84    ; 2        ; 13           ; 3            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /EM1OE                 ; 43    ; 1        ; 4            ; 3            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /EM1WE                 ; 44    ; 1        ; 4            ; 3            ; 1           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; /INT0                  ; 85    ; 2        ; 13           ; 3            ; 2           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; /INT1                  ; 86    ; 2        ; 13           ; 3            ; 1           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /SIG_AZ_ENC_CABLE_LOOP ; 101   ; 2        ; 13           ; 5            ; 2           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /SIG_AZ_IGBT_ERR_U     ; 108   ; 2        ; 13           ; 7            ; 1           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /SIG_AZ_IGBT_ERR_V     ; 109   ; 2        ; 12           ; 8            ; 1           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
@@ -224,7 +224,7 @@ The pin-out file can be found in C:/Users/DEV_W8V/Documents/git/TCU_CPLD/output_
 ; /SIG_SENSOR_CABLE_LOOP ; 113   ; 2        ; 11           ; 8            ; 3           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /SIG_SENSOR_OUT1       ; 105   ; 2        ; 13           ; 6            ; 1           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /SIG_SENSOR_OUT2       ; 106   ; 2        ; 13           ; 7            ; 5           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
-; /SIG_SENSOR_OUT3       ; 107   ; 2        ; 13           ; 7            ; 3           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
+; /SIG_SENSOR_OUT3       ; 107   ; 2        ; 13           ; 7            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /SIG_VEH_CABLE_LOOP    ; 5     ; 1        ; 0            ; 7            ; 2           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; /SIG_VMS_CABLE_LOOP    ; 4     ; 1        ; 0            ; 7            ; 0           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
 ; BF_A0                  ; 71    ; 1        ; 12           ; 0            ; 2           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ;
@@ -293,12 +293,10 @@ The pin-out file can be found in C:/Users/DEV_W8V/Documents/git/TCU_CPLD/output_
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------------+-----------------+------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; /INT0    ; 85    ; 2        ; 13           ; 3            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; /INT1    ; 86    ; 2        ; 13           ; 3            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; /INT2    ; 87    ; 2        ; 13           ; 3            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; /INT3    ; 88    ; 2        ; 13           ; 4            ; 5           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; /INT4    ; 93    ; 2        ; 13           ; 4            ; 2           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; /INT5    ; 94    ; 2        ; 13           ; 4            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; /INT3    ; 88    ; 2        ; 13           ; 4            ; 5           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; /INT4    ; 93    ; 2        ; 13           ; 4            ; 2           ; 1                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; /INT5    ; 94    ; 2        ; 13           ; 4            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; BF_D[0]  ; 70    ; 1        ; 11           ; 0            ; 1           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; BF_D[10] ; 55    ; 1        ; 7            ; 3            ; 3           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; BF_D[11] ; 53    ; 1        ; 6            ; 3            ; 0           ; 0                     ; 0                  ; no     ; no              ; no             ; no              ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -420,8 +418,8 @@ The pin-out file can be found in C:/Users/DEV_W8V/Documents/git/TCU_CPLD/output_
 ; 82       ;            ; 2        ; VCCIO2                 ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 83       ;            ;          ; GNDIO                  ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 84       ; 96         ; 2        ; /EM1CS4                ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 85       ; 97         ; 2        ; /INT0                  ; bidir  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
-; 86       ; 98         ; 2        ; /INT1                  ; bidir  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 85       ; 97         ; 2        ; /INT0                  ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 86       ; 98         ; 2        ; /INT1                  ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 87       ; 99         ; 2        ; /INT2                  ; bidir  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 88       ; 100        ; 2        ; /INT3                  ; bidir  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 89       ; 101        ; 2        ; EGPIO0                 ; bidir  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
@@ -505,7 +503,7 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                     ; Library Name ;
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
-; |SPB_CPLD                                 ; 50 (14)     ; 27           ; 0          ; 113  ; 0            ; 23 (5)       ; 6 (6)             ; 21 (3)           ; 22 (1)          ; 2 (2)      ; |SPB_CPLD                                                                                               ; work         ;
+; |SPB_CPLD                                 ; 53 (17)     ; 30           ; 0          ; 113  ; 0            ; 23 (5)       ; 7 (7)             ; 23 (5)           ; 22 (1)          ; 3 (3)      ; |SPB_CPLD                                                                                               ; work         ;
 ;    |74138:inst12|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst12                                                                                  ; work         ;
 ;    |74138:inst1|                          ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst1                                                                                   ; work         ;
 ;    |LPM_COUNTER10:inst10|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10                                                                          ; work         ;
@@ -550,7 +548,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; /SIG_AZ_SIG_CABLE_LOOP ; Input    ; (0)           ;
 ; /SIG_SENSOR_OUT1       ; Input    ; (0)           ;
 ; /SIG_SENSOR_OUT2       ; Input    ; (0)           ;
-; /SIG_SENSOR_OUT3       ; Input    ; (0)           ;
 ; /SIG_AZ_IGBT_ERR_U     ; Input    ; (0)           ;
 ; /SIG_AZ_IGBT_ERR_V     ; Input    ; (0)           ;
 ; /SIG_AZ_IGBT_ERR_W     ; Input    ; (0)           ;
@@ -578,6 +575,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; /SIG_EL_LOCKING_SW     ; Input    ; (0)           ;
 ; SIG_DAC1_/LDAC         ; Input    ; (0)           ;
 ; SIG_DAC2_/LDAC         ; Input    ; (0)           ;
+; /INT0                  ; Input    ; (0)           ;
+; /INT1                  ; Input    ; (0)           ;
 ; BF_A3                  ; Input    ; (0)           ;
 ; BF_A4                  ; Input    ; (0)           ;
 ; BF_A17                 ; Input    ; (1)           ;
@@ -590,6 +589,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BF_A2                  ; Input    ; (1)           ;
 ; /EM1CS4                ; Input    ; (1)           ;
 ; /EM1OE                 ; Input    ; (1)           ;
+; /SIG_SENSOR_OUT3       ; Input    ; (1)           ;
 ; SIG_RDC1_DIR           ; Input    ; (1)           ;
 ; SIG_RDC2_DIR           ; Input    ; (1)           ;
 ; GCLK0                  ; Input    ; (0)           ;
@@ -621,11 +621,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LED7                   ; Output   ; --            ;
 ; LED0                   ; Output   ; --            ;
 ; SIG_RDC_/RESET         ; Output   ; --            ;
-; /INT0                  ; Bidir    ; (0)           ;
-; /INT1                  ; Bidir    ; (0)           ;
+; /INT4                  ; Bidir    ; (1)           ;
+; /INT3                  ; Bidir    ; (1)           ;
 ; /INT2                  ; Bidir    ; (0)           ;
-; /INT3                  ; Bidir    ; (0)           ;
-; /INT4                  ; Bidir    ; (0)           ;
 ; /INT5                  ; Bidir    ; (0)           ;
 ; EGPIO2                 ; Bidir    ; (0)           ;
 ; EGPIO0                 ; Bidir    ; (0)           ;
@@ -655,11 +653,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                           ; Location     ; Fan-Out ; Usage             ; Global ; Global Resource Used ; Global Line Name ;
 +------------------------------------------------------------------------------------------------+--------------+---------+-------------------+--------+----------------------+------------------+
 ; GCLK0                                                                                          ; PIN_18       ; 15      ; Clock             ; yes    ; Global Clock         ; GCLK0            ;
-; LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|modulus_trigger ; LC_X10_Y4_N4 ; 8       ; Clock, Sync. load ; yes    ; Global Clock         ; GCLK1            ;
-; LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|modulus_trigger ; LC_X11_Y3_N9 ; 9       ; Clock, Sync. load ; yes    ; Global Clock         ; GCLK3            ;
-; LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_l4k:auto_generated|_~0              ; LC_X11_Y6_N9 ; 5       ; Sync. load        ; no     ; --                   ; --               ;
-; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|_~0             ; LC_X10_Y3_N9 ; 5       ; Sync. load        ; no     ; --                   ; --               ;
-; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|modulus_trigger ; LC_X10_Y3_N6 ; 4       ; Clock             ; yes    ; Global Clock         ; GCLK2            ;
+; LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|modulus_trigger ; LC_X10_Y4_N4 ; 8       ; Clock, Sync. load ; yes    ; Global Clock         ; GCLK3            ;
+; LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|modulus_trigger ; LC_X10_Y3_N9 ; 12      ; Clock, Sync. load ; yes    ; Global Clock         ; GCLK2            ;
+; LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_l4k:auto_generated|_~0              ; LC_X11_Y7_N7 ; 5       ; Sync. load        ; no     ; --                   ; --               ;
+; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|_~0             ; LC_X11_Y3_N7 ; 5       ; Sync. load        ; no     ; --                   ; --               ;
+; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|modulus_trigger ; LC_X11_Y3_N6 ; 4       ; Clock             ; yes    ; Global Clock         ; GCLK1            ;
 ; SPI_CLK_START                                                                                  ; PIN_95       ; 12      ; Async. clear      ; no     ; --                   ; --               ;
 +------------------------------------------------------------------------------------------------+--------------+---------+-------------------+--------+----------------------+------------------+
 
@@ -670,9 +668,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                           ; Location     ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +------------------------------------------------------------------------------------------------+--------------+---------+----------------------+------------------+
 ; GCLK0                                                                                          ; PIN_18       ; 15      ; Global Clock         ; GCLK0            ;
-; LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|modulus_trigger ; LC_X10_Y4_N4 ; 8       ; Global Clock         ; GCLK1            ;
-; LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|modulus_trigger ; LC_X11_Y3_N9 ; 9       ; Global Clock         ; GCLK3            ;
-; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|modulus_trigger ; LC_X10_Y3_N6 ; 4       ; Global Clock         ; GCLK2            ;
+; LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|modulus_trigger ; LC_X10_Y4_N4 ; 8       ; Global Clock         ; GCLK3            ;
+; LPM_COUNTER10:inst11|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|modulus_trigger ; LC_X10_Y3_N9 ; 12      ; Global Clock         ; GCLK2            ;
+; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|modulus_trigger ; LC_X11_Y3_N6 ; 4       ; Global Clock         ; GCLK1            ;
 +------------------------------------------------------------------------------------------------+--------------+---------+----------------------+------------------+
 
 
@@ -693,9 +691,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BF_A17                                                                                                              ; 4       ;
 ; 74138:inst1|18~0                                                                                                    ; 4       ;
 ; /EM1CS3                                                                                                             ; 3       ;
-; inst35                                                                                                              ; 3       ;
 ; SIG_RDC2_DIR                                                                                                        ; 2       ;
 ; SIG_RDC1_DIR                                                                                                        ; 2       ;
+; /SIG_SENSOR_OUT3                                                                                                    ; 2       ;
 ; /EM1CS4                                                                                                             ; 2       ;
 ; /EM1CS2                                                                                                             ; 2       ;
 ; LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|safe_q[3]                            ; 2       ;
@@ -716,14 +714,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; inst153                                                                                                             ; 2       ;
 ; inst149                                                                                                             ; 2       ;
 ; inst148                                                                                                             ; 2       ;
+; inst134                                                                                                             ; 2       ;
+; inst133                                                                                                             ; 2       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|counter_cella3~COUT                  ; 2       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[3]                            ; 2       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[4]                            ; 2       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[2]                            ; 2       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[1]                            ; 2       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[0]                            ; 2       ;
-; inst36                                                                                                              ; 2       ;
+; inst35                                                                                                              ; 2       ;
 ; inst24~0                                                                                                            ; 2       ;
+; /INT3~0                                                                                                             ; 1       ;
+; /INT4~0                                                                                                             ; 1       ;
 ; /EM1OE                                                                                                              ; 1       ;
 ; LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|cmpr_1vb:cmpr1|aneb_result_wire[0]~0 ; 1       ;
 ; LPM_COUNTER10:inst10|lpm_counter:LPM_COUNTER_component|cntr_r1j:auto_generated|counter_cella3~COUTCOUT1_3           ; 1       ;
@@ -755,6 +757,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_l4k:auto_generated|counter_cella4~COUT                   ; 1       ;
 ; inst156~0                                                                                                           ; 1       ;
 ; inst151~0                                                                                                           ; 1       ;
+; inst55~0                                                                                                            ; 1       ;
 ; inst29                                                                                                              ; 1       ;
 ; LPM_COUNTER20:inst8|lpm_counter:LPM_COUNTER_component|cntr_l4k:auto_generated|modulus_trigger                       ; 1       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|cmpr_2vb:cmpr1|aneb_result_wire[0]   ; 1       ;
@@ -767,6 +770,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|counter_cella1~COUT                  ; 1       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|counter_cella0~COUTCOUT1_3           ; 1       ;
 ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|counter_cella0~COUT                  ; 1       ;
+; inst36                                                                                                              ; 1       ;
 ; inst6~0                                                                                                             ; 1       ;
 ; inst25~0                                                                                                            ; 1       ;
 ; inst24~1                                                                                                            ; 1       ;
@@ -779,97 +783,97 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------+
-; Other Routing Usage Summary                        ;
-+-----------------------------+----------------------+
-; Other Routing Resource Type ; Usage                ;
-+-----------------------------+----------------------+
-; C4s                         ; 31 / 1,624 ( 2 % )   ;
-; Direct links                ; 12 / 1,930 ( < 1 % ) ;
-; Global clocks               ; 4 / 4 ( 100 % )      ;
-; LAB clocks                  ; 7 / 56 ( 13 % )      ;
-; LUT chains                  ; 2 / 513 ( < 1 % )    ;
-; Local interconnects         ; 46 / 1,930 ( 2 % )   ;
-; R4s                         ; 41 / 1,472 ( 3 % )   ;
-+-----------------------------+----------------------+
-
-
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 5.56) ; Number of LABs  (Total = 9) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 1                           ;
-; 2                                          ; 0                           ;
-; 3                                          ; 2                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 1                           ;
-; 6                                          ; 2                           ;
-; 7                                          ; 1                           ;
-; 8                                          ; 0                           ;
-; 9                                          ; 1                           ;
-; 10                                         ; 1                           ;
-+--------------------------------------------+-----------------------------+
-
-
-+------------------------------------------------------------------+
-; LAB-wide Signals                                                 ;
-+------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 0.78) ; Number of LABs  (Total = 9) ;
-+------------------------------------+-----------------------------+
-; 1 Clock                            ; 6                           ;
-; 2 Clocks                           ; 1                           ;
-+------------------------------------+-----------------------------+
++---------------------------------------------------+
+; Other Routing Usage Summary                       ;
++-----------------------------+---------------------+
+; Other Routing Resource Type ; Usage               ;
++-----------------------------+---------------------+
+; C4s                         ; 29 / 1,624 ( 2 % )  ;
+; Direct links                ; 5 / 1,930 ( < 1 % ) ;
+; Global clocks               ; 4 / 4 ( 100 % )     ;
+; LAB clocks                  ; 9 / 56 ( 16 % )     ;
+; LUT chains                  ; 4 / 513 ( < 1 % )   ;
+; Local interconnects         ; 42 / 1,930 ( 2 % )  ;
+; R4s                         ; 42 / 1,472 ( 3 % )  ;
++-----------------------------+---------------------+
 
 
 +---------------------------------------------------------------------------+
-; LAB Signals Sourced                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 5.67) ; Number of LABs  (Total = 9) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 2                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 1                           ;
-; 6                                           ; 2                           ;
-; 7                                           ; 1                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 1                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 5.30) ; Number of LABs  (Total = 10) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 0                            ;
+; 2                                          ; 1                            ;
+; 3                                          ; 3                            ;
+; 4                                          ; 0                            ;
+; 5                                          ; 1                            ;
+; 6                                          ; 3                            ;
+; 7                                          ; 0                            ;
+; 8                                          ; 0                            ;
+; 9                                          ; 1                            ;
+; 10                                         ; 1                            ;
++--------------------------------------------+------------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 2.11) ; Number of LABs  (Total = 9) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 6                           ;
-; 2                                               ; 1                           ;
-; 3                                               ; 0                           ;
-; 4                                               ; 0                           ;
-; 5                                               ; 1                           ;
-; 6                                               ; 1                           ;
-+-------------------------------------------------+-----------------------------+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 0.80) ; Number of LABs  (Total = 10) ;
++------------------------------------+------------------------------+
+; 1 Clock                            ; 7                            ;
+; 2 Clocks                           ; 1                            ;
++------------------------------------+------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 3.00) ; Number of LABs  (Total = 9) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
-; 2                                           ; 4                           ;
-; 3                                           ; 1                           ;
-; 4                                           ; 1                           ;
-; 5                                           ; 1                           ;
-; 6                                           ; 1                           ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 5.40) ; Number of LABs  (Total = 10) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 3                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 3                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 1                            ;
++---------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 2.10) ; Number of LABs  (Total = 10) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 6                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 0                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 1                            ;
++-------------------------------------------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 2.90) ; Number of LABs  (Total = 10) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 6                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 1                            ;
++---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -885,25 +889,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Reserve all unused pins                      ; As output driving ground ;
 ; Base pin-out file on sameframe device        ; Off                      ;
 +----------------------------------------------+--------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                                                                        ;
-+-----------------+------------------------------------------------------------------------------------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s)                                                                           ; Delay Added in ns ;
-+-----------------+------------------------------------------------------------------------------------------------+-------------------+
-; GCLK0           ; LPM_COUNTER25:inst23|lpm_counter:LPM_COUNTER_component|cntr_r4k:auto_generated|safe_q[0],GCLK0 ; 2.3               ;
-+-----------------+------------------------------------------------------------------------------------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
-
-
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details              ;
-+-----------------+----------------------+-------------------+
-; Source Register ; Destination Register ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-Note: This table only shows the top 0 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -964,15 +949,13 @@ Info (170195): Router estimated average interconnect usage is 2% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Warning (169064): Following 25 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin /INT0 has a permanently disabled output enable
-    Info (169065): Pin /INT1 has a permanently disabled output enable
-    Info (169065): Pin /INT2 has a permanently disabled output enable
-    Info (169065): Pin /INT3 has a permanently disabled output enable
+Warning (169064): Following 23 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin /INT4 has a permanently disabled output enable
-    Info (169065): Pin /INT5 has a permanently disabled output enable
+    Info (169065): Pin /INT3 has a permanently disabled output enable
+    Info (169065): Pin /INT2 has a permanently disabled output enable
+    Info (169065): Pin /INT5 has a permanently enabled output enable
     Info (169065): Pin EGPIO2 has a permanently disabled output enable
     Info (169065): Pin EGPIO0 has a permanently enabled output enable
     Info (169065): Pin EGPIO1 has a permanently enabled output enable
@@ -995,10 +978,10 @@ Warning (169064): Following 25 pins have no output enable or a GND or VCC output
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/DEV_W8V/Documents/git/TCU_CPLD/output_files/SPB_CPLD.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Mon Dec 04 18:18:03 2023
+    Info: Peak virtual memory: 4772 megabytes
+    Info: Processing ended: Mon Feb 05 10:24:13 2024
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
 +----------------------------+

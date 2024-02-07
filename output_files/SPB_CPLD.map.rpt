@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SPB_CPLD
-Mon Dec 04 18:18:01 2023
+Mon Feb 05 10:24:12 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -49,12 +49,12 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Dec 04 18:18:01 2023           ;
+; Analysis & Synthesis Status ; Successful - Mon Feb 05 10:24:12 2024           ;
 ; Quartus II 64-Bit Version   ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name               ; SPB_CPLD                                        ;
 ; Top-level Entity Name       ; SPB_CPLD                                        ;
 ; Family                      ; MAX II                                          ;
-; Total logic elements        ; 53                                              ;
+; Total logic elements        ; 57                                              ;
 ; Total pins                  ; 113                                             ;
 ; Total virtual pins          ; 0                                               ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                   ;
@@ -178,33 +178,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 53    ;
-;     -- Combinational with no register       ; 26    ;
-;     -- Register only                        ; 9     ;
-;     -- Combinational with a register        ; 18    ;
+; Total logic elements                        ; 57    ;
+;     -- Combinational with no register       ; 27    ;
+;     -- Register only                        ; 11    ;
+;     -- Combinational with a register        ; 19    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 14    ;
+;     -- 4 input functions                    ; 15    ;
 ;     -- 3 input functions                    ; 9     ;
 ;     -- 2 input functions                    ; 18    ;
-;     -- 1 input functions                    ; 2     ;
+;     -- 1 input functions                    ; 3     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 35    ;
+;     -- normal mode                          ; 39    ;
 ;     -- arithmetic mode                      ; 18    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 18    ;
 ;     -- asynchronous clear/load mode         ; 10    ;
 ;                                             ;       ;
-; Total registers                             ; 27    ;
+; Total registers                             ; 30    ;
 ; Total logic cells in carry chains           ; 22    ;
 ; I/O pins                                    ; 113   ;
 ; Maximum fan-out node                        ; ~GND  ;
 ; Maximum fan-out                             ; 18    ;
-; Total fan-out                               ; 209   ;
-; Average fan-out                             ; 1.26  ;
+; Total fan-out                               ; 220   ;
+; Average fan-out                             ; 1.29  ;
 +---------------------------------------------+-------+
 
 
@@ -213,7 +213,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                     ; Library Name ;
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------------+--------------+
-; |SPB_CPLD                                 ; 53 (16)     ; 27           ; 0          ; 113  ; 0            ; 26 (7)       ; 9 (9)             ; 18 (0)           ; 22 (0)          ; 0 (0)      ; |SPB_CPLD                                                                                               ; work         ;
+; |SPB_CPLD                                 ; 57 (20)     ; 30           ; 0          ; 113  ; 0            ; 27 (8)       ; 11 (11)           ; 19 (1)           ; 22 (0)          ; 0 (0)      ; |SPB_CPLD                                                                                               ; work         ;
 ;    |74138:inst12|                         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst12                                                                                  ; work         ;
 ;    |74138:inst1|                          ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |SPB_CPLD|74138:inst1                                                                                   ; work         ;
 ;    |LPM_COUNTER10:inst10|                 ; 6 (0)       ; 4            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |SPB_CPLD|LPM_COUNTER10:inst10                                                                          ; work         ;
@@ -281,7 +281,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 30    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 18    ;
 ; Number of registers using Asynchronous Clear ; 10    ;
@@ -459,7 +459,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 04 18:17:59 2023
+    Info: Processing started: Mon Feb 05 10:24:10 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPB_CPLD -c SPB_CPLD
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file spb_cpld.bdf
@@ -512,7 +512,6 @@ Warning (275009): Pin "/SIG_EL_SIG_CABLE_LOOP" not connected
 Warning (275009): Pin "/SIG_AZ_SIG_CABLE_LOOP" not connected
 Warning (275009): Pin "/SIG_SENSOR_OUT1" not connected
 Warning (275009): Pin "/SIG_SENSOR_OUT2" not connected
-Warning (275009): Pin "/SIG_SENSOR_OUT3" not connected
 Warning (275009): Pin "/SIG_AZ_IGBT_ERR_U" not connected
 Warning (275009): Pin "/SIG_AZ_IGBT_ERR_V" not connected
 Warning (275009): Pin "/SIG_AZ_IGBT_ERR_W" not connected
@@ -540,6 +539,8 @@ Warning (275009): Pin "EM1WAIT" not connected
 Warning (275009): Pin "/SIG_EL_LOCKING_SW" not connected
 Warning (275009): Pin "SIG_DAC1_/LDAC" not connected
 Warning (275009): Pin "SIG_DAC2_/LDAC" not connected
+Warning (275009): Pin "/INT0" not connected
+Warning (275009): Pin "/INT1" not connected
 Warning (275009): Pin "BF_A3" not connected
 Warning (275009): Pin "BF_A4" not connected
 Warning (275008): Primitive "DFF" of instance "inst107" not used
@@ -560,6 +561,12 @@ Warning (275008): Primitive "DFF" of instance "inst123" not used
 Warning (275008): Primitive "DFF" of instance "inst124" not used
 Warning (275008): Primitive "DFF" of instance "inst125" not used
 Warning (275008): Primitive "DFF" of instance "inst126" not used
+Warning (275008): Primitive "DFF" of instance "inst127" not used
+Warning (275008): Primitive "DFF" of instance "inst128" not used
+Warning (275008): Primitive "DFF" of instance "inst129" not used
+Warning (275008): Primitive "DFF" of instance "inst130" not used
+Warning (275008): Primitive "DFF" of instance "inst131" not used
+Warning (275008): Primitive "DFF" of instance "inst132" not used
 Warning (275008): Primitive "DFF" of instance "inst139" not used
 Warning (275008): Primitive "DFF" of instance "inst140" not used
 Warning (275008): Primitive "DFF" of instance "inst141" not used
@@ -588,6 +595,10 @@ Warning (275008): Primitive "NOT" of instance "inst48" not used
 Warning (275008): Primitive "NOT" of instance "inst49" not used
 Warning (275008): Primitive "XOR" of instance "inst50" not used
 Warning (275008): Primitive "OR2" of instance "inst51" not used
+Warning (275008): Primitive "AND4" of instance "inst52" not used
+Warning (275008): Primitive "NOT" of instance "inst53" not used
+Warning (275008): Primitive "AND4" of instance "inst54" not used
+Warning (275008): Primitive "NOT" of instance "inst56" not used
 Warning (275008): Primitive "AND4" of instance "inst9" not used
 Warning (275008): Primitive "DFF" of instance "inst93" not used
 Warning (275008): Primitive "DFF" of instance "inst94" not used
@@ -638,15 +649,13 @@ Info (12128): Elaborating entity "cmpr_1vb" for hierarchy "LPM_COUNTER10:inst11|
 Info (13014): Ignored 3 buffer(s)
     Info (13019): Ignored 3 SOFT buffer(s)
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "/INT5" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO0" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "EGPIO1" and its non-tri-state driver.
 Warning (13039): The following bidir pins have no drivers
-    Warning (13040): Bidir "/INT0" has no driver
-    Warning (13040): Bidir "/INT1" has no driver
-    Warning (13040): Bidir "/INT2" has no driver
-    Warning (13040): Bidir "/INT3" has no driver
     Warning (13040): Bidir "/INT4" has no driver
-    Warning (13040): Bidir "/INT5" has no driver
+    Warning (13040): Bidir "/INT3" has no driver
+    Warning (13040): Bidir "/INT2" has no driver
     Warning (13040): Bidir "EGPIO2" has no driver
     Warning (13040): Bidir "BF_D" has no driver
     Warning (13040): Bidir "BF_D" has no driver
@@ -665,6 +674,7 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "BF_D" has no driver
     Warning (13040): Bidir "BF_D" has no driver
 Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "/INT5~synth"
     Warning (13010): Node "EGPIO0~synth"
     Warning (13010): Node "EGPIO1~synth"
 Warning (13024): Output pins are stuck at VCC or GND
@@ -681,8 +691,10 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED6" is stuck at GND
     Warning (13410): Pin "LED7" is stuck at GND
     Warning (13410): Pin "SIG_RDC_/RESET" is stuck at VCC
+Warning (18029): Output pin "LED1" driven by bidirectional pin "/INT4" cannot be tri-stated
+Warning (18029): Output pin "LED0" driven by bidirectional pin "/INT3" cannot be tri-stated
 Info (17049): 8 registers lost all their fanouts during netlist optimizations.
-Warning (21074): Design contains 47 input pin(s) that do not drive logic
+Warning (21074): Design contains 48 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/SIG_MDU_CABLE_LOOP"
     Warning (15610): No output dependent on input pin "/SIG_PCU_CABLE_LOOP"
     Warning (15610): No output dependent on input pin "/SIG_OCU_CABLE_LOOP"
@@ -700,7 +712,6 @@ Warning (21074): Design contains 47 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/SIG_AZ_SIG_CABLE_LOOP"
     Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT1"
     Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT2"
-    Warning (15610): No output dependent on input pin "/SIG_SENSOR_OUT3"
     Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_U"
     Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_V"
     Warning (15610): No output dependent on input pin "/SIG_AZ_IGBT_ERR_W"
@@ -728,17 +739,19 @@ Warning (21074): Design contains 47 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "/SIG_EL_LOCKING_SW"
     Warning (15610): No output dependent on input pin "SIG_DAC1_/LDAC"
     Warning (15610): No output dependent on input pin "SIG_DAC2_/LDAC"
+    Warning (15610): No output dependent on input pin "/INT0"
+    Warning (15610): No output dependent on input pin "/INT1"
     Warning (15610): No output dependent on input pin "BF_A3"
     Warning (15610): No output dependent on input pin "BF_A4"
-Info (21057): Implemented 166 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 61 input pins
+Info (21057): Implemented 170 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 63 input pins
     Info (21059): Implemented 27 output pins
-    Info (21060): Implemented 25 bidirectional pins
-    Info (21061): Implemented 53 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 204 warnings
+    Info (21060): Implemented 23 bidirectional pins
+    Info (21061): Implemented 57 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 217 warnings
     Info: Peak virtual memory: 4636 megabytes
-    Info: Processing ended: Mon Dec 04 18:18:01 2023
+    Info: Processing ended: Mon Feb 05 10:24:12 2024
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
